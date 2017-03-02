@@ -6,14 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/3 | TuCai&#39;s Blog</title>
+  <title>荼菜的iOS笔记--UIView的几个Block动画 | TuCai&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="TuCai's Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/03/index.html">
+  <meta name="description" content="前言：我的第一篇文章荼菜的iOS笔记–Core Animation 核心动画算是比较详细讲了核心动画的用法，但是如你上篇看到的，有时我们只是想实现一些很小的动画，这时再用coreAnimation就会觉得麻烦，不用慌，苹果工程师爸爸们已经为我们给UIView封装好了一些coreAnimationBlock，足以满足平时的动画需求。
+
+动画Block1
+
+12345678910/* 参数1: Dur">
+<meta property="og:type" content="article">
+<meta property="og:title" content="荼菜的iOS笔记--UIView的几个Block动画">
+<meta property="og:url" content="http://yoursite.com/2017/03/02/荼菜的iOS笔记-UIView的几个Block动画/index.html">
 <meta property="og:site_name" content="TuCai's Blog">
+<meta property="og:description" content="前言：我的第一篇文章荼菜的iOS笔记–Core Animation 核心动画算是比较详细讲了核心动画的用法，但是如你上篇看到的，有时我们只是想实现一些很小的动画，这时再用coreAnimation就会觉得麻烦，不用慌，苹果工程师爸爸们已经为我们给UIView封装好了一些coreAnimationBlock，足以满足平时的动画需求。
+
+动画Block1
+
+12345678910/* 参数1: Dur">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1438251-7ad2c344d6f9bbaf.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-03-02T08:54:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TuCai's Blog">
+<meta name="twitter:title" content="荼菜的iOS笔记--UIView的几个Block动画">
+<meta name="twitter:description" content="前言：我的第一篇文章荼菜的iOS笔记–Core Animation 核心动画算是比较详细讲了核心动画的用法，但是如你上篇看到的，有时我们只是想实现一些很小的动画，这时再用coreAnimation就会觉得麻烦，不用慌，苹果工程师爸爸们已经为我们给UIView封装好了一些coreAnimationBlock，足以满足平时的动画需求。
+
+动画Block1
+
+12345678910/* 参数1: Dur">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1438251-7ad2c344d6f9bbaf.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="TuCai&#39;s Blog" type="application/atom+xml">
   
@@ -145,292 +163,159 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-荼菜的iOS笔记-UIView的几个Block动画" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      荼菜的iOS笔记--UIView的几个Block动画
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-UIView的几个Block动画/" class="archive-article-date">
+
+        
+        <a href="/2017/03/02/荼菜的iOS笔记-UIView的几个Block动画/" class="archive-article-date">
   	<time datetime="2017-03-02T08:54:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-UIView的几个Block动画/">荼菜的iOS笔记--UIView的几个Block动画</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://upload-images.jianshu.io/upload_images/1438251-7ad2c344d6f9bbaf.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="二"><br><strong>前言：我的第一篇文章<a href="http://www.jianshu.com/p/06dbbccd54f2" target="_blank" rel="external">荼菜的iOS笔记–Core Animation 核心动画</a></strong>算是比较详细讲了核心动画的用法，但是如你上篇看到的，有时我们只是想实现一些很小的动画，这时再用coreAnimation就会觉得麻烦，不用慌，苹果工程师爸爸们已经为我们给UIView封装好了一些coreAnimationBlock，足以满足平时的动画需求。</p>
+<ul>
+<li><strong>动画Block1</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">/* </div><div class="line">参数1: Duration: 动画持续时间</div><div class="line">参数2: delay: 延迟时间</div><div class="line">参数3: options: 枚举值 动画的效果类型</div><div class="line">*/</div><div class="line">[UIView animateWithDuration:2 delay:1 options:UIViewAnimationOptionCurveEaseInOut animations:^&#123;</div><div class="line">ws.MyLabel.frame = CGRectMake(100, 100, 100, 100);</div><div class="line">&#125; completion:^(BOOL finished) &#123;</div><div class="line">NSLog(@&quot;结束了%d&quot;, finished); </div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>动画Block2-(模拟弹簧弹跳的效果)</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">Spring: 模拟弹簧弹跳的效果</div><div class="line">参数: Damping:阻尼 0-1 阻尼越小动画越明显</div><div class="line">参数: initialSpringVelocity : 动画初始变化速度</div><div class="line">参数: options 转变的风格 枚举值</div><div class="line">*/</div><div class="line">[UIView animateWithDuration:10 delay:0 usingSpringWithDamping:0.1 initialSpringVelocity:15 options:(UIViewAnimationOptionCurveEaseInOut) animations:^&#123;</div><div class="line">ws.MyLabel.center = CGPointMake(self.view.center.x, 100);</div><div class="line">&#125; completion:^(BOOL finished) &#123;</div><div class="line">NSLog(@&quot;弹簧效果结束&quot;);</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>动画Block3-(关键帧动画)</strong>也就是里面有好几个动画进行转变</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">Duration:持续时间</div><div class="line">delay: 延迟时间</div><div class="line">options: 枚举值 动画的风格</div><div class="line">*/</div><div class="line">[UIView animateKeyframesWithDuration:3 delay:0 options:(UIViewKeyframeAnimationOptionRepeat) animations:^&#123;</div><div class="line">/*</div><div class="line">参数1: RelativeStartTime: 相对的开始时间</div><div class="line">参数2: relativeDuration:相对持续时间</div><div class="line">*/</div><div class="line">[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^&#123;</div><div class="line">ws.MyLabel.center = self.view.center;</div><div class="line">&#125;];</div><div class="line">[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.3 animations:^&#123;</div><div class="line">ws.MyLabel.frame = CGRectMake(100, 100, 100, 100);</div><div class="line">&#125;];</div><div class="line"></div><div class="line">[UIView addKeyframeWithRelativeStartTime:0.8 relativeDuration:0.3 animations:^&#123;</div><div class="line">ws.MyLabel.frame = CGRectMake(100, 400, 100, 100);</div><div class="line">&#125;]; </div><div class="line">&#125; completion:^(BOOL finished) &#123;</div><div class="line">NSLog(@&quot;开始了吗？已经结束了。。&quot;);</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>Masonry动画更新约束</strong><br>1.有时不适用<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">[ws.allWarpView mas_updateConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">make.left.equalTo(ws.view.mas_left);</div><div class="line">make.right.equalTo(ws.view.mas_right);</div><div class="line">make.top.equalTo(ws.view.mas_top);</div><div class="line">make.bottom.equalTo(ws.view.mas_bottom);</div><div class="line">&#125;];</div><div class="line">// 告诉self.view约束需要更新</div><div class="line">[self.view setNeedsUpdateConstraints];</div><div class="line">// 调用此方法告诉self.view检测是否需要更新约束，若需要则更新，下面添加动画效果才起作用</div><div class="line">[self.view updateConstraintsIfNeeded];</div><div class="line">[UIView animateWithDuration:0.3 animations:^&#123;</div><div class="line">[self.view layoutIfNeeded];</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>2.解决<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">   [self layoutIfNeeded];//如果其约束还没有生成的时候需要动画的话，就请先强制刷新后才写动画，否则所有没生成的约束会直接跑动画</div><div class="line">    JCWeakSelf</div><div class="line">    [UIView animateWithDuration:0.3 animations:^&#123; </div><div class="line">        [_keywordTextField mas_updateConstraints:^(MASConstraintMaker *make) &#123;</div><div class="line">            make.width.mas_equalTo(@(255*RealScaleFactor));</div><div class="line">        &#125;];</div><div class="line">        [ws layoutIfNeeded];//强制绘制</div><div class="line">    &#125;];</div></pre></td></tr></table></figure></p>
+<hr>
+<p><strong>后话：附上之前写的文章，欢迎指正：</strong><br><a href="http://www.jianshu.com/p/06dbbccd54f2" target="_blank" rel="external">荼菜的iOS笔记–Core Animation 核心动画
+</a><br><a href="http://www.jianshu.com/p/1cff3fe34307" target="_blank" rel="external">荼菜的iOS笔记–一些实用功能。</a><br><a href="http://www.jianshu.com/p/fa53a2ffc0c6" target="_blank" rel="external">荼菜的iOS笔记–UITableViewCell的各种操作（刷新、插入、删除、动画）</a><br><a href="http://www.jianshu.com/p/6b850e1e6306" target="_blank" rel="external">荼菜的iOS笔记–一张图记住所有git命令行操作。</a><br><a href="http://www.jianshu.com/p/36346ccc1b92" target="_blank" rel="external">荼菜的iOS笔记–一张图告诉你程序员需要知道的这些网站。</a><br><a href="http://www.jianshu.com/p/77ca88d36682" target="_blank" rel="external">荼菜的iOS笔记–图片裁剪黑魔法。</a><br><a href="http://www.jianshu.com/p/443c60408035" target="_blank" rel="external">荼菜的iOS笔记–iOS自动打包脚本（Python）
+</a><br><a href="http://www.jianshu.com/p/36b6443d5ad7" target="_blank" rel="external">荼菜的iOS笔记–我的编码规范参考。</a><br><a href="http://www.jianshu.com/p/3812ede99dca" target="_blank" rel="external">荼菜的iOS笔记–iOS基础优秀博客总结ToDoList</a><br><a href="http://www.jianshu.com/p/191b20c40143" target="_blank" rel="external">荼菜的iOS笔记–Xcode Tips</a><br><strong>当然，我还写过诗。。。</strong><br><a href="http://www.jianshu.com/p/f6927319f802" target="_blank" rel="external">光。</a></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/02/荼菜的iOS笔记-UIView的几个Block动画/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-一些实用功能。/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:52:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-一些实用功能。/">荼菜的iOS笔记--一些实用功能。</a>
-    </h1>
+  
+    <a href="/2017/03/02/荼菜的iOS笔记-一些实用功能。/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">荼菜的iOS笔记--一些实用功能。</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/光。/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:51:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/光。/">光。</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-UITableViewCell的各种操作（刷新、插入、删除、动画）/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:50:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-UITableViewCell的各种操作（刷新、插入、删除、动画）/">荼菜的iOS笔记--UITableViewCell的各种操作（刷新、插入、删除、动画）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-一张图记住所有git命令行操作。/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:47:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-一张图记住所有git命令行操作。/">荼菜的iOS笔记--一张图记住所有git命令行操作。</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-图片裁剪黑魔法。/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:45:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-图片裁剪黑魔法。/">荼菜的iOS笔记--图片裁剪黑魔法。</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-Xcode-Tips/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:44:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-Xcode-Tips/">荼菜的iOS笔记--Xcode Tips</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-iOS基础优秀博客总结ToDoList/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:41:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-iOS基础优秀博客总结ToDoList/">荼菜的iOS笔记--iOS基础优秀博客总结ToDoList</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-我的编码规范参考/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:38:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-我的编码规范参考/">荼菜的iOS笔记--我的编码规范参考.</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-iOS自动打包/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:34:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-iOS自动打包/">荼菜的iOS笔记--iOS自动打包</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -453,8 +338,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
