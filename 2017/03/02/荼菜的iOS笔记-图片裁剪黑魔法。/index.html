@@ -6,14 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | TuCai&#39;s Blog</title>
+  <title>荼菜的iOS笔记--图片裁剪黑魔法。 | TuCai&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="TuCai's Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="前言：最近在做一款对话交互式的美食机器人应用，目前内测阶段，效果如上图。最近闲暇之余会把期间总结的一些知识点写下来，做个总结。前期有段时间困扰了我很久一个问题由于工程中的图片数据抓取自不同平台，所以图片的大小尺寸不一定，而放置图片的imageView尺寸是一定的，不作任何处理的话会导致图片拉伸变形，因此找了好久解决办法，现把它拿出来。
+*图片裁剪代码：12345678910111213141516">
+<meta property="og:type" content="article">
+<meta property="og:title" content="荼菜的iOS笔记--图片裁剪黑魔法。">
+<meta property="og:url" content="http://yoursite.com/2017/03/02/荼菜的iOS笔记-图片裁剪黑魔法。/index.html">
 <meta property="og:site_name" content="TuCai's Blog">
+<meta property="og:description" content="前言：最近在做一款对话交互式的美食机器人应用，目前内测阶段，效果如上图。最近闲暇之余会把期间总结的一些知识点写下来，做个总结。前期有段时间困扰了我很久一个问题由于工程中的图片数据抓取自不同平台，所以图片的大小尺寸不一定，而放置图片的imageView尺寸是一定的，不作任何处理的话会导致图片拉伸变形，因此找了好久解决办法，现把它拿出来。
+*图片裁剪代码：12345678910111213141516">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1438251-fe3420ef5538ddd7.gif?imageMogr2/auto-orient/strip">
+<meta property="og:updated_time" content="2017-03-02T08:46:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TuCai's Blog">
+<meta name="twitter:title" content="荼菜的iOS笔记--图片裁剪黑魔法。">
+<meta name="twitter:description" content="前言：最近在做一款对话交互式的美食机器人应用，目前内测阶段，效果如上图。最近闲暇之余会把期间总结的一些知识点写下来，做个总结。前期有段时间困扰了我很久一个问题由于工程中的图片数据抓取自不同平台，所以图片的大小尺寸不一定，而放置图片的imageView尺寸是一定的，不作任何处理的话会导致图片拉伸变形，因此找了好久解决办法，现把它拿出来。
+*图片裁剪代码：12345678910111213141516">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1438251-fe3420ef5538ddd7.gif?imageMogr2/auto-orient/strip">
   
     <link rel="alternative" href="/atom.xml" title="TuCai&#39;s Blog" type="application/atom+xml">
   
@@ -145,157 +154,144 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-荼菜的iOS笔记-图片裁剪黑魔法。" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      荼菜的iOS笔记--图片裁剪黑魔法。
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-图片裁剪黑魔法。/" class="archive-article-date">
+
+        
+        <a href="/2017/03/02/荼菜的iOS笔记-图片裁剪黑魔法。/" class="archive-article-date">
   	<time datetime="2017-03-02T08:45:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-图片裁剪黑魔法。/">荼菜的iOS笔记--图片裁剪黑魔法。</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://upload-images.jianshu.io/upload_images/1438251-fe3420ef5538ddd7.gif?imageMogr2/auto-orient/strip" alt="LiangShi.gif"><br><strong>前言：最近在做一款对话交互式的美食机器人应用，目前内测阶段，效果如上图。最近闲暇之余会把期间总结的一些知识点写下来，做个总结。前期有段时间困扰了我很久一个问题由于工程中的图片数据抓取自不同平台，所以图片的大小尺寸不一定，而放置图片的imageView尺寸是一定的，不作任何处理的话会导致图片拉伸变形，因此找了好久解决办法，现把它拿出来。</strong></p>
+<p>*图片裁剪代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#import &lt;UIKit/UIKit.h&gt;</div><div class="line">#import &quot;UIImageView+WebCache.h&quot;</div><div class="line"></div><div class="line">@interface UIImageView (WebImage)</div><div class="line"></div><div class="line">/**</div><div class="line"> *  @author Tucai, 16-02-23 12:02:53</div><div class="line"> *</div><div class="line"> *  设置能够自动裁剪的网络图，基于SDWebImage实现</div><div class="line"> *</div><div class="line"> */</div><div class="line"></div><div class="line">// 模糊图渲染</div><div class="line">- (void)renderBlurredImageWithUrl:(NSString *)url placeholder:(UIImage *)placeholder completed:(imageDownloadCompletedBlock) completedBlock;</div><div class="line"></div><div class="line">//按比例缩放网络图片</div><div class="line"></div><div class="line">- (void)yg_setTrimImageWithUrl:(NSString *)url placeholderImage:(UIImage *)placeholder;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#import &quot;UIImageView+WebImage.h&quot;</div><div class="line">#import &quot;NSString+URLEncoding.h&quot;</div><div class="line">@implementation UIImageView (WebImage)</div><div class="line"></div><div class="line">#pragma mark - 模糊图渲染</div><div class="line"></div><div class="line">- (void)renderBlurredImageWithUrl:(NSString *)url placeholder:(UIImage *)placeholder completed:(imageDownloadCompletedBlock) completedBlock</div><div class="line">&#123;</div><div class="line">    // 这里必须开启内存缓存</div><div class="line">    [SDWebImageManager sharedManager].imageCache.shouldCacheImagesInMemory = YES;</div><div class="line">    </div><div class="line">    // 渲染背景</div><div class="line">    __weak typeof(self) ws = self;</div><div class="line">    [ws sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage *webImage, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) &#123;</div><div class="line">        // 999 是一个标记</div><div class="line">        if (ws.tag != 999) &#123;</div><div class="line">            UIVisualEffectView *visualView = [[UIVisualEffectView alloc] initWithFrame:ws.bounds];</div><div class="line">            UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];</div><div class="line">            visualView.effect = effect;</div><div class="line">            NSLog(@&quot;only once&quot;);</div><div class="line">            [ws addSubview:visualView];</div><div class="line">            ws.tag = 999;</div><div class="line">        &#125;</div><div class="line">        ws.alpha =0.6;</div><div class="line">        ws.image = nil;</div><div class="line">        ws.image = webImage;</div><div class="line">        if (completedBlock) &#123;</div><div class="line">            completedBlock(webImage);</div><div class="line">        &#125;</div><div class="line">    &#125;];</div><div class="line">&#125;</div><div class="line"></div><div class="line">#pragma mark - 裁剪图片</div><div class="line"></div><div class="line">- (void)yg_setTrimImageWithUrl:(NSString *)url placeholderImage:(UIImage *)placeholder&#123;</div><div class="line">    </div><div class="line">    __weak typeof(self) ws = self;</div><div class="line">        [SDWebImageManager sharedManager].imageCache.shouldCacheImagesInMemory = NO;</div><div class="line">    </div><div class="line">    [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:placeholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) &#123;</div><div class="line">        if (image) &#123;</div><div class="line">            UIImage *img=[self yg_trimImageWithImage:image];</div><div class="line">            ws.image=img;</div><div class="line">        &#125;else&#123;</div><div class="line">            ws.image =[self yg_trimImageWithImage:placeholder];</div><div class="line">        &#125;</div><div class="line">    &#125;];</div><div class="line">&#125;</div><div class="line"></div><div class="line">-(UIImage *)yg_trimImageWithImage:(UIImage *)image&#123;</div><div class="line">    </div><div class="line">    //imageView的宽高比</div><div class="line">    CGFloat imageViewWidthHeightRatio =self.frame.size.width/self.frame.size.height;</div><div class="line">    //屏幕分辨率</div><div class="line">//    CGFloat imageScale = [[UIScreen mainScreen] scale];</div><div class="line"></div><div class="line">    CGFloat imageScale = 1;</div><div class="line">    </div><div class="line">    CGFloat imageWith = image.size.width*imageScale;</div><div class="line">    </div><div class="line">    CGFloat imageHeight =image.size.height*imageScale;</div><div class="line">    </div><div class="line">    //image的宽高比</div><div class="line">    CGFloat imageWidthHeightRatio =imageWith/imageHeight;</div><div class="line"></div><div class="line">    CGImageRef imageRef = nil;</div><div class="line">    </div><div class="line">    CGRect rect;</div><div class="line">    </div><div class="line">//    NSLog(@&quot;\nimageWith === %f\nimageHeight === %f\nImageView宽高比 == %f\nimageScale == %f&quot;,imageWith,imageHeight,imageViewWidthHeightRatio,imageScale);</div><div class="line"></div><div class="line">    </div><div class="line">    if (imageWidthHeightRatio&gt;imageViewWidthHeightRatio) &#123;</div><div class="line">        </div><div class="line">        rect = CGRectMake((imageWith-imageHeight*imageViewWidthHeightRatio)/2, 0, imageHeight*imageViewWidthHeightRatio, imageHeight);</div><div class="line">        </div><div class="line">    &#125;else if (imageWidthHeightRatio&lt;imageViewWidthHeightRatio) &#123;</div><div class="line">        </div><div class="line">        rect = CGRectMake(0, (imageHeight-imageWith/imageViewWidthHeightRatio)/2, imageWith, imageWith/imageViewWidthHeightRatio);</div><div class="line">        </div><div class="line">    &#125;else &#123;</div><div class="line">        rect = CGRectMake(0, 0, imageWith, imageHeight);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    imageRef = CGImageCreateWithImageInRect([image CGImage], rect);</div><div class="line">    UIImage *res = [UIImage imageWithCGImage:imageRef scale:imageScale orientation:UIImageOrientationUp];</div><div class="line"></div><div class="line">    /**</div><div class="line">     一定要，千万要release，否则等着内存泄露吧，稍微高清点的图一张图就是几M内存，很快App就挂了</div><div class="line">     */</div><div class="line">    CGImageRelease(imageRef);</div><div class="line">    </div><div class="line">    return res;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
+<p><strong>后话：附上之前写的文章，欢迎指正：</strong></p>
+<p><a href="http://www.jianshu.com/p/06dbbccd54f2" target="_blank" rel="external">荼菜的iOS笔记–Core Animation 核心动画
+</a><br><a href="http://www.jianshu.com/p/88e20ba25eb9" target="_blank" rel="external">荼菜的iOS笔记–UIView的几个Block动画</a><br><a href="http://www.jianshu.com/p/1cff3fe34307" target="_blank" rel="external">荼菜的iOS笔记–一些实用功能。</a><br><a href="http://www.jianshu.com/p/fa53a2ffc0c6" target="_blank" rel="external">荼菜的iOS笔记–UITableViewCell的各种操作（刷新、插入、删除、动画）</a><br><a href="http://www.jianshu.com/p/6b850e1e6306" target="_blank" rel="external">荼菜的iOS笔记–一张图记住所有git命令行操作。</a><br><a href="http://www.jianshu.com/p/36346ccc1b92" target="_blank" rel="external">荼菜的iOS笔记–一张图告诉你程序员需要知道的这些网站。</a><br><a href="http://www.jianshu.com/p/443c60408035" target="_blank" rel="external">荼菜的iOS笔记–iOS自动打包脚本（Python）
+</a><br><a href="http://www.jianshu.com/p/36b6443d5ad7" target="_blank" rel="external">荼菜的iOS笔记–我的编码规范参考。</a><br><a href="http://www.jianshu.com/p/3812ede99dca" target="_blank" rel="external">荼菜的iOS笔记–iOS基础优秀博客总结ToDoList</a><br><a href="http://www.jianshu.com/p/191b20c40143" target="_blank" rel="external">荼菜的iOS笔记–Xcode Tips</a><br><strong>当然，我还写过诗。。。</strong><br><a href="http://www.jianshu.com/p/f6927319f802" target="_blank" rel="external">光。</a>  </p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/02/荼菜的iOS笔记-图片裁剪黑魔法。/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-Xcode-Tips/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:44:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-Xcode-Tips/">荼菜的iOS笔记--Xcode Tips</a>
-    </h1>
+  
+    <a href="/2017/03/02/荼菜的iOS笔记-Xcode-Tips/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">荼菜的iOS笔记--Xcode Tips</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-iOS基础优秀博客总结ToDoList/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:41:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-iOS基础优秀博客总结ToDoList/">荼菜的iOS笔记--iOS基础优秀博客总结ToDoList</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-我的编码规范参考/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:38:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-我的编码规范参考/">荼菜的iOS笔记--我的编码规范参考.</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/荼菜的iOS笔记-iOS自动打包/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:34:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/荼菜的iOS笔记-iOS自动打包/">荼菜的iOS笔记--iOS自动打包</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -318,8 +314,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
