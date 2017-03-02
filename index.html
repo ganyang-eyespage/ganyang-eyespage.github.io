@@ -147,6 +147,68 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-荼菜的iOS笔记-我的编码规范参考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/02/荼菜的iOS笔记-我的编码规范参考/">荼菜的iOS笔记--我的编码规范参考.</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/02/荼菜的iOS笔记-我的编码规范参考/" class="archive-article-date">
+  	<time datetime="2017-03-02T08:38:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://upload-images.jianshu.io/upload_images/1438251-72cf86b265f1fc67.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="what&#39;s wrong?"></p>
+<p><strong>前言：下面是我的编码习惯。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#一、常量</div><div class="line">相对字符串字面量或数字，我们更推荐适用常量。应使用static方式声明常量，而非使用#define的方式来定义宏。</div><div class="line">例如：</div><div class="line">static NSString * const NYTAboutViewControllerCompanyName = @&quot;The New York Times Company&quot;;  </div><div class="line">static const CGFloat NYTImageThumbnailHeight = 50.0;</div><div class="line">不恰当:</div><div class="line">//#define CompanyName @&quot;The New York Times Company&quot;</div><div class="line">//#define thumbnailHeight 2</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#二、枚举类型</div><div class="line">在使用enum的时候，推荐适用最新的fixed underlying type(WWDC 2012 session 405- Modern Objective-C)规范，因为它具备更强的类型检查和代码完成功能。</div><div class="line">如：</div><div class="line">typedef NS_ENUM(NSInteger, NYTAdRequestState) &#123;</div><div class="line">NYTAdRequestStateInactive,</div><div class="line">NYTAdRequestStateLoading</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#三、布尔变量</div><div class="line">如果一个BOOL属性使用形容词来表达，属性将忽略’is’前缀，但会强调惯用名称。 例如：</div><div class="line">@property (assign, getter=isEditable) BOOL editable;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#四、单例</div><div class="line">在创建单例对象的共享实例时，应使用线程安全模式。</div><div class="line">如：</div><div class="line">(instancetype)sharedInstance &#123;</div><div class="line">static id sharedInstance = nil;</div><div class="line">static dispatch_once_t onceToken;</div><div class="line">dispatch_once(&amp;onceToken, ^&#123;</div><div class="line">sharedInstance = [[self alloc] init];</div><div class="line">&#125;);</div><div class="line">return sharedInstance;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">#五、Import</div><div class="line">在类的头文件中需要引用其他的类的时候，需要用@class这个关键字，这样能减少类与类之间的依赖。</div><div class="line">如:</div><div class="line">store.h:</div><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line">#import &lt;CoreData/CoreData.h&gt;</div><div class="line">@class User;</div><div class="line">@interface Store : NSManagedObject</div><div class="line">@property (nonatomic, retain) User *user;</div><div class="line">@end</div><div class="line">Store.m:</div><div class="line">#import &quot;Store.h&quot;</div><div class="line">#import &quot;User.h&quot;</div><div class="line">@implementation Store</div><div class="line">//doSomething</div><div class="line">@end</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#六、CGRect函数</div><div class="line">当需要获取一个CGRect矩形的x,y,width,height属性时，应使用CGGeometry函数，而非直接访问结构体成员。</div><div class="line">如：</div><div class="line">CGRect frame = self.view.frame;</div><div class="line">CGFloat x = CGRectGetMinX(frame);</div><div class="line">CGFloat y = CGRectGetMinY(frame);</div><div class="line">CGFloat width = CGRectGetWidth(frame);</div><div class="line">CGFloat height = CGRectGetHeight(frame);</div><div class="line">不恰当：</div><div class="line">CGRect frame = self.view.frame;</div><div class="line">CGFloat x = frame.origin.x;</div><div class="line">CGFloat y = frame.origin.y;</div><div class="line">CGFloat width = frame.size.width;</div><div class="line">CGFloat height = frame.size.height;</div></pre></td></tr></table></figure>
+<hr>
+<p><strong>后话：附上之前写的文章，欢迎指正：</strong><br><a href="http://www.jianshu.com/p/06dbbccd54f2" target="_blank" rel="external">荼菜的iOS笔记–Core Animation 核心动画
+</a><br><a href="http://www.jianshu.com/p/88e20ba25eb9" target="_blank" rel="external">荼菜的iOS笔记–UIView的几个Block动画</a><br><a href="http://www.jianshu.com/p/1cff3fe34307" target="_blank" rel="external">荼菜的iOS笔记–一些实用功能。</a><br><a href="http://www.jianshu.com/p/fa53a2ffc0c6" target="_blank" rel="external">荼菜的iOS笔记–UITableViewCell的各种操作（刷新、插入、删除、动画）</a><br><a href="http://www.jianshu.com/p/6b850e1e6306" target="_blank" rel="external">荼菜的iOS笔记–一张图记住所有git命令行操作。</a><br><a href="http://www.jianshu.com/p/36346ccc1b92" target="_blank" rel="external">荼菜的iOS笔记–一张图告诉你程序员需要知道的这些网站。</a><br><a href="http://www.jianshu.com/p/77ca88d36682" target="_blank" rel="external">荼菜的iOS笔记–图片裁剪黑魔法。</a><br><a href="http://www.jianshu.com/p/443c60408035" target="_blank" rel="external">荼菜的iOS笔记–iOS自动打包脚本（Python）
+</a><br><a href="http://www.jianshu.com/p/3812ede99dca" target="_blank" rel="external">荼菜的iOS笔记–iOS基础优秀博客总结ToDoList</a><br><a href="http://www.jianshu.com/p/191b20c40143" target="_blank" rel="external">荼菜的iOS笔记–Xcode Tips</a><br><strong>当然，我还写过诗。。。</strong><br><a href="http://www.jianshu.com/p/f6927319f802" target="_blank" rel="external">光。</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/02/荼菜的iOS笔记-我的编码规范参考/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-荼菜的iOS笔记-iOS自动打包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
