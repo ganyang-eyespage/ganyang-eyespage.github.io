@@ -147,32 +147,28 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-荼菜的iOS笔记-iOS自动打包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-光。" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/02/荼菜的iOS笔记-iOS自动打包/">荼菜的iOS笔记--iOS自动打包</a>
+      <a class="article-title" href="/2015/09/25/光。/">光。</a>
     </h1>
   
 
         
-        <a href="/2017/03/02/荼菜的iOS笔记-iOS自动打包/" class="archive-article-date">
-  	<time datetime="2017-03-02T08:34:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
+        <a href="/2015/09/25/光。/" class="archive-article-date">
+  	<time datetime="2015-09-25T08:51:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://upload-images.jianshu.io/upload_images/1438251-cdd88014a03d8731.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="脚本"></p>
-<p><strong>最近几天学Python，顺便写了个自动打包的脚本，给大家做个参考。注释和步骤代码里都写得有，使用时把工程路径换了就行。可以直接拷贝到你的.py文件里执行。当然你还可以来我的GitHub直接下载文件<a href="https://github.com/ganyang-eyespage/Python_Archiveipa" target="_blank" rel="external">Python_Archiveipa</a></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div></pre></td><td class="code"><pre><div class="line">import os</div><div class="line">import sys</div><div class="line">import time</div><div class="line">import hashlib</div><div class="line">from email import encoders</div><div class="line">from email.header import Header</div><div class="line">from email.mime.text import MIMEText</div><div class="line">from email.utils import parseaddr, formataddr</div><div class="line">import smtplib</div><div class="line"></div><div class="line"># 项目根目录</div><div class="line">project_path = &apos;/Users/yanggan/Desktop/jucai-ios-app&apos;</div><div class="line"># 编译成功后.app所在目录  其中&apos;/Users/yanggan/Desktop/jucai-ios-app&apos;为项目路径</div><div class="line">app_path = &apos;%s/build/Build/Products/Release-iphoneos/JuCaiShengHuo.app&apos; % (project_path)</div><div class="line"># 指定项目下编译目录</div><div class="line">build_path = &apos;build&apos;</div><div class="line"># 打包后ipa存储目录</div><div class="line">targerIPA_parth = &apos;/Users/yanggan/Desktop&apos;</div><div class="line"></div><div class="line"># 项目名称</div><div class="line">project_name = &apos;JuCaiShengHuo&apos;</div><div class="line"></div><div class="line"># ipafilename</div><div class="line">ipa_filename = &apos;JuCaiShengHuo.ipa&apos;</div><div class="line"></div><div class="line"># firm的api token  需要自己申请账号，申请地址-&gt;  http://fir.im/apps</div><div class="line">fir_api_token = &apos;4a0d2512c33d0a10ca0e59dbd04b45b0&apos;</div><div class="line"></div><div class="line"># 需要自己配置邮件端口号，服务器和对方邮箱地址</div><div class="line">#from_addr = &quot;邮件地址&quot;</div><div class="line">#password = &quot;邮件密码&quot;</div><div class="line">#smtp_server = &quot;smtp.服务器&quot;</div><div class="line">#to_addr = &quot;对方邮件地址&quot;</div><div class="line"></div><div class="line"># 清理项目 创建build目录</div><div class="line">def clean_project_mkdir_build():</div><div class="line">    os.system(&apos;cd %s;xcodebuild clean&apos; % project_path) # clean 项目</div><div class="line">    os.system(&apos;cd %s;mkdir build&apos; % project_path)</div><div class="line"></div><div class="line">def build_project():</div><div class="line">    print(&apos;build release start&apos;)</div><div class="line">    os.system (&apos;xcodebuild -list&apos;)</div><div class="line">    os.system (&apos;cd %s;xcodebuild -workspace %s.xcworkspace  -scheme %s -configuration release -derivedDataPath %s ONLY_ACTIVE_ARCH=NO || exit&apos; % (project_path,project_name,project_name,build_path))</div><div class="line"># CONFIGURATION_BUILD_DIR=./build/Release-iphoneos</div><div class="line"></div><div class="line"># 打包ipa 并且保存在桌面</div><div class="line">def build_ipa():</div><div class="line">    global ipa_filename</div><div class="line">#    ipa_filename = time.strftime(&apos;xx_%Y-%m-%d-%H-%M-%S.ipa&apos;,time.localtime(time.time()))</div><div class="line">    os.system (&apos;xcrun -sdk iphoneos PackageApplication -v %s -o %s/%s&apos;%(app_path,targerIPA_parth,ipa_filename))</div><div class="line">#上传</div><div class="line">def upload_fir():</div><div class="line">    if os.path.exists(&apos;%s/%s&apos; % (targerIPA_parth,ipa_filename)):</div><div class="line">        print(&apos;watting...&apos;)</div><div class="line">        # 直接使用fir 有问题 这里使用了绝对地址 在终端通过 which fir 获得</div><div class="line">        ret = os.system(&apos;fir p %s/%s -T %s&apos; % (targerIPA_parth,ipa_filename,fir_api_token))</div><div class="line">    else:</div><div class="line">        print(&apos;没有找到ipa文件&apos;)</div><div class="line"></div><div class="line">def _format_addr(s):</div><div class="line">    name, addr = parseaddr(s)</div><div class="line">    return formataddr((Header(name, &apos;utf-8&apos;).encode(), addr))</div><div class="line"></div><div class="line"># 发邮件</div><div class="line">def send_mail():</div><div class="line">    msg = MIMEText(&apos;xx iOS测试项目已经打包完毕，请前往 http://fir.im/xxxxx 下载测试！&apos;, &apos;plain&apos;, &apos;utf-8&apos;)</div><div class="line">    msg[&apos;From&apos;] = _format_addr(&apos;自动打包系统 &lt;%s&gt;&apos; % from_addr)</div><div class="line">    msg[&apos;To&apos;] = _format_addr(&apos;xx测试人员 &lt;%s&gt;&apos; % to_addr)</div><div class="line">    msg[&apos;Subject&apos;] = Header(&apos;xx iOS客户端打包程序&apos;, &apos;utf-8&apos;).encode()</div><div class="line"></div><div class="line">#    pop = poplib.POP3(&quot;pop3.mxhichina.com&quot;)</div><div class="line">#    pop.set_debuglevel(1)            #会打印出debug信息</div><div class="line">#    pop.user(from_addr)</div><div class="line">#    pop.pass_(password)</div><div class="line"></div><div class="line">    server = smtplib.SMTP(smtp_server, 25)</div><div class="line">    server.set_debuglevel(1)</div><div class="line">    server.login(from_addr, password)</div><div class="line">    server.sendmail(from_addr, [to_addr], msg.as_string())</div><div class="line">    server.quit()</div><div class="line"></div><div class="line">def main():</div><div class="line">    # 清理并创建build目录</div><div class="line">    clean_project_mkdir_build()</div><div class="line">    # 编译coocaPods项目文件并 执行编译目录</div><div class="line">    build_project()</div><div class="line">    # 打包ipa 并制定到桌面</div><div class="line">    build_ipa()</div><div class="line">    # 上传fir</div><div class="line">    # upload_fir()</div><div class="line">    # 发邮件</div><div class="line">#    send_mail() #暂时不用，需要配置企业邮箱的端口号和服务器</div><div class="line"></div><div class="line"># 执行</div><div class="line">main()</div></pre></td></tr></table></figure>
-<hr>
-<p><strong>后话：附上之前写的文章，欢迎指正：</strong><br><a href="http://www.jianshu.com/p/06dbbccd54f2" target="_blank" rel="external">荼菜的iOS笔记–Core Animation 核心动画
-</a><br><a href="http://www.jianshu.com/p/88e20ba25eb9" target="_blank" rel="external">荼菜的iOS笔记–UIView的几个Block动画</a><br><a href="http://www.jianshu.com/p/1cff3fe34307" target="_blank" rel="external">荼菜的iOS笔记–一些实用功能。</a><br><a href="http://www.jianshu.com/p/fa53a2ffc0c6" target="_blank" rel="external">荼菜的iOS笔记–UITableViewCell的各种操作（刷新、插入、删除、动画）</a><br><a href="http://www.jianshu.com/p/6b850e1e6306" target="_blank" rel="external">荼菜的iOS笔记–一张图记住所有git命令行操作。</a><br><a href="http://www.jianshu.com/p/36346ccc1b92" target="_blank" rel="external">荼菜的iOS笔记–一张图告诉你程序员需要知道的这些网站。</a><br><a href="http://www.jianshu.com/p/77ca88d36682" target="_blank" rel="external">荼菜的iOS笔记–图片裁剪黑魔法。</a><br><a href="http://www.jianshu.com/p/36b6443d5ad7" target="_blank" rel="external">荼菜的iOS笔记–我的编码规范参考。</a><br><a href="http://www.jianshu.com/p/3812ede99dca" target="_blank" rel="external">荼菜的iOS笔记–iOS基础优秀博客总结ToDoList</a><br><a href="http://www.jianshu.com/p/191b20c40143" target="_blank" rel="external">荼菜的iOS笔记–Xcode Tips</a><br><strong>当然，我还写过诗。。。</strong><br><a href="http://www.jianshu.com/p/f6927319f802" target="_blank" rel="external">光。</a></p>
+        <p><img src="http://upload-images.jianshu.io/upload_images/1438251-4f9788602d4e6523.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="逆光.jpg"></p>
+<p><strong>我</strong><br><strong>逆着光走去</strong><br><strong>朦胧全是人影</strong><br><strong>可我看不到任何人的面孔</strong><br><strong>管他呢</strong><br><strong>因为我知道</strong><br><strong>光的方向有你</strong><br><strong>你逆着它</strong><br><strong>你认得出我</strong></p>
 
       
 
@@ -181,11 +177,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">poem</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/02/荼菜的iOS笔记-iOS自动打包/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/09/25/光。/">展开全文 >></a>
         </p>
       
 
@@ -294,6 +301,14 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">poem</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
