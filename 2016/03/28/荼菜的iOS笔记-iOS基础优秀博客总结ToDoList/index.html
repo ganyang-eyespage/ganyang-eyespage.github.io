@@ -6,23 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>荼菜的iOS笔记--我的编码规范参考. | TuCai&#39;s Blog</title>
+  <title>荼菜的iOS笔记--iOS基础优秀博客总结ToDoList | TuCai&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言：下面是我的编码习惯。
-12345678#一、常量相对字符串字面量或数字，我们更推荐适用常量。应使用static方式声明常量，而非使用#define的方式来定义宏。例如：static NSString * const NYTAboutViewControllerCompanyName = @&amp;quot;The New York Times Company&amp;quot;;  static con">
+  <meta name="description" content="前言：最近在总结iOS比较底层的东西，于是翻遍了各个大牛的博客，看到AidenRao总结的文章，挨个点进去看了很不错，于是又补充了些我觉得不错的文章，给自己做个备份。
+
+#类和对象
+iOS程序main函数之前发生了什么谈ObjC对象的两段构造模式从NSObject的初始化了解isa (1)深入解析ObjC中方法的结构(2)What is a meta-class in Objective-C?对">
 <meta property="og:type" content="article">
-<meta property="og:title" content="荼菜的iOS笔记--我的编码规范参考.">
-<meta property="og:url" content="http://yoursite.com/2016/12/02/荼菜的iOS笔记-我的编码规范参考/index.html">
+<meta property="og:title" content="荼菜的iOS笔记--iOS基础优秀博客总结ToDoList">
+<meta property="og:url" content="http://yoursite.com/2016/03/28/荼菜的iOS笔记-iOS基础优秀博客总结ToDoList/index.html">
 <meta property="og:site_name" content="TuCai's Blog">
-<meta property="og:description" content="前言：下面是我的编码习惯。
-12345678#一、常量相对字符串字面量或数字，我们更推荐适用常量。应使用static方式声明常量，而非使用#define的方式来定义宏。例如：static NSString * const NYTAboutViewControllerCompanyName = @&amp;quot;The New York Times Company&amp;quot;;  static con">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1438251-72cf86b265f1fc67.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-03-02T09:14:33.000Z">
+<meta property="og:description" content="前言：最近在总结iOS比较底层的东西，于是翻遍了各个大牛的博客，看到AidenRao总结的文章，挨个点进去看了很不错，于是又补充了些我觉得不错的文章，给自己做个备份。
+
+#类和对象
+iOS程序main函数之前发生了什么谈ObjC对象的两段构造模式从NSObject的初始化了解isa (1)深入解析ObjC中方法的结构(2)What is a meta-class in Objective-C?对">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1438251-8d200f75547e55a3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-03-02T09:18:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="荼菜的iOS笔记--我的编码规范参考.">
-<meta name="twitter:description" content="前言：下面是我的编码习惯。
-12345678#一、常量相对字符串字面量或数字，我们更推荐适用常量。应使用static方式声明常量，而非使用#define的方式来定义宏。例如：static NSString * const NYTAboutViewControllerCompanyName = @&amp;quot;The New York Times Company&amp;quot;;  static con">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1438251-72cf86b265f1fc67.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="荼菜的iOS笔记--iOS基础优秀博客总结ToDoList">
+<meta name="twitter:description" content="前言：最近在总结iOS比较底层的东西，于是翻遍了各个大牛的博客，看到AidenRao总结的文章，挨个点进去看了很不错，于是又补充了些我觉得不错的文章，给自己做个备份。
+
+#类和对象
+iOS程序main函数之前发生了什么谈ObjC对象的两段构造模式从NSObject的初始化了解isa (1)深入解析ObjC中方法的结构(2)What is a meta-class in Objective-C?对">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1438251-8d200f75547e55a3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="TuCai&#39;s Blog" type="application/atom+xml">
   
@@ -154,38 +160,80 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-荼菜的iOS笔记-我的编码规范参考" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-荼菜的iOS笔记-iOS基础优秀博客总结ToDoList" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      荼菜的iOS笔记--我的编码规范参考.
+      荼菜的iOS笔记--iOS基础优秀博客总结ToDoList
     </h1>
   
 
         
-        <a href="/2016/12/02/荼菜的iOS笔记-我的编码规范参考/" class="archive-article-date">
-  	<time datetime="2016-12-02T08:38:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
+        <a href="/2016/03/28/荼菜的iOS笔记-iOS基础优秀博客总结ToDoList/" class="archive-article-date">
+  	<time datetime="2016-03-28T11:41:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://upload-images.jianshu.io/upload_images/1438251-72cf86b265f1fc67.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="what&#39;s wrong?"></p>
-<p><strong>前言：下面是我的编码习惯。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#一、常量</div><div class="line">相对字符串字面量或数字，我们更推荐适用常量。应使用static方式声明常量，而非使用#define的方式来定义宏。</div><div class="line">例如：</div><div class="line">static NSString * const NYTAboutViewControllerCompanyName = @&quot;The New York Times Company&quot;;  </div><div class="line">static const CGFloat NYTImageThumbnailHeight = 50.0;</div><div class="line">不恰当:</div><div class="line">//#define CompanyName @&quot;The New York Times Company&quot;</div><div class="line">//#define thumbnailHeight 2</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#二、枚举类型</div><div class="line">在使用enum的时候，推荐适用最新的fixed underlying type(WWDC 2012 session 405- Modern Objective-C)规范，因为它具备更强的类型检查和代码完成功能。</div><div class="line">如：</div><div class="line">typedef NS_ENUM(NSInteger, NYTAdRequestState) &#123;</div><div class="line">NYTAdRequestStateInactive,</div><div class="line">NYTAdRequestStateLoading</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#三、布尔变量</div><div class="line">如果一个BOOL属性使用形容词来表达，属性将忽略’is’前缀，但会强调惯用名称。 例如：</div><div class="line">@property (assign, getter=isEditable) BOOL editable;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#四、单例</div><div class="line">在创建单例对象的共享实例时，应使用线程安全模式。</div><div class="line">如：</div><div class="line">(instancetype)sharedInstance &#123;</div><div class="line">static id sharedInstance = nil;</div><div class="line">static dispatch_once_t onceToken;</div><div class="line">dispatch_once(&amp;onceToken, ^&#123;</div><div class="line">sharedInstance = [[self alloc] init];</div><div class="line">&#125;);</div><div class="line">return sharedInstance;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">#五、Import</div><div class="line">在类的头文件中需要引用其他的类的时候，需要用@class这个关键字，这样能减少类与类之间的依赖。</div><div class="line">如:</div><div class="line">store.h:</div><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line">#import &lt;CoreData/CoreData.h&gt;</div><div class="line">@class User;</div><div class="line">@interface Store : NSManagedObject</div><div class="line">@property (nonatomic, retain) User *user;</div><div class="line">@end</div><div class="line">Store.m:</div><div class="line">#import &quot;Store.h&quot;</div><div class="line">#import &quot;User.h&quot;</div><div class="line">@implementation Store</div><div class="line">//doSomething</div><div class="line">@end</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#六、CGRect函数</div><div class="line">当需要获取一个CGRect矩形的x,y,width,height属性时，应使用CGGeometry函数，而非直接访问结构体成员。</div><div class="line">如：</div><div class="line">CGRect frame = self.view.frame;</div><div class="line">CGFloat x = CGRectGetMinX(frame);</div><div class="line">CGFloat y = CGRectGetMinY(frame);</div><div class="line">CGFloat width = CGRectGetWidth(frame);</div><div class="line">CGFloat height = CGRectGetHeight(frame);</div><div class="line">不恰当：</div><div class="line">CGRect frame = self.view.frame;</div><div class="line">CGFloat x = frame.origin.x;</div><div class="line">CGFloat y = frame.origin.y;</div><div class="line">CGFloat width = frame.size.width;</div><div class="line">CGFloat height = frame.size.height;</div></pre></td></tr></table></figure>
+        <p><img src="http://upload-images.jianshu.io/upload_images/1438251-8d200f75547e55a3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ToDoList"></p>
+<p><strong>前言：最近在总结iOS比较底层的东西，于是翻遍了各个大牛的博客，看到<a href="http://www.jianshu.com/u/263107bb1199" target="_blank" rel="external">AidenRao</a>总结的文章，挨个点进去看了很不错，于是又补充了些我觉得不错的文章，给自己做个备份。</strong></p>
+<hr>
+<p>#类和对象</p>
+<p><a href="http://blog.sunnyxx.com/2014/08/30/objc-pre-main/" target="_blank" rel="external">iOS程序main函数之前发生了什么</a><br><a href="http://blog.devtang.com/2013/01/13/two-stage-creation-on-cocoa/" target="_blank" rel="external"><a href="http://blog.devtang.com/2013/01/13/two-stage-creation-on-cocoa/" target="_blank" rel="external">谈ObjC对象的两段构造模式</a></a><br><a href="https://github.com/Draveness/iOS-Source-Code-Analyze/blob/master/contents/objc/%E4%BB%8E%20NSObject%20%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BA%86%E8%A7%A3%20isa.md" target="_blank" rel="external">从NSObject的初始化了解isa (1)</a><br><a href="https://github.com/Draveness/iOS-Source-Code-Analyze/blob/master/contents/objc/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%20ObjC%20%E4%B8%AD%E6%96%B9%E6%B3%95%E7%9A%84%E7%BB%93%E6%9E%84.md" target="_blank" rel="external">深入解析ObjC中方法的结构(2)</a><br><a href="http://www.cocoawithlove.com/2010/01/what-is-meta-class-in-objective-c.html" target="_blank" rel="external">What is a meta-class in Objective-C?</a><br><a href="https://github.com/Draveness/iOS-Source-Code-Analyze/blob/master/contents/objc/%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%A6%82%E4%BD%95%E5%88%9D%E5%A7%8B%E5%8C%96%E7%9A%84%EF%BC%88iOS%EF%BC%89.md" target="_blank" rel="external">对象是如何初始化的</a><br><a href="http://tech.meituan.com/DiveIntoCategory.html" target="_blank" rel="external">深入理解Objective-C：Category</a></p>
+<hr>
+<p>#RunLoop  ：<br><a href="http://blog.ibireme.com/2015/05/18/runloop/" target="_blank" rel="external">YY大神(深入理解RunLoop)</a><br><a href="http://v.youku.com/v_show/id_XODgxODkzODI0.html" target="_blank" rel="external">视频：孙源(百度)(线下分享RunLoop)</a><br><a href="http://www.jianshu.com/p/63f79fa04e52" target="_blank" rel="external">RunLoop总结：RunLoop基础知识</a><br><a href="http://www.jianshu.com/p/902741bcf707" target="_blank" rel="external">RunLoop 总结：RunLoop的应用场景（一）保证线程长久存活</a><br><a href="http://www.jianshu.com/p/b2d431d6fa09" target="_blank" rel="external">RunLoop 总结：RunLoop的应用场景（二）让Timer正常运转</a><br><a href="http://www.jianshu.com/p/aa499d790c50" target="_blank" rel="external">RunLoop总结：RunLoop的应用场景（三）滚动视图流畅性优化</a><br><a href="http://www.jianshu.com/p/9e2529fbe963" target="_blank" rel="external">RunLoop总结：RunLoop的应用场景（四）App卡顿监测</a><br><a href="http://www.jianshu.com/p/fee0c5155b8e" target="_blank" rel="external">RunLoop总结：RunLoop的应用场景（五）阻止App崩溃一次</a></p>
+<hr>
+<p>#Runtime<br><a href="http://aes.jypc.org/?p=18581" target="_blank" rel="external">iOS-runtime</a><br><a href="http://www.jianshu.com/p/927c8384855a" target="_blank" rel="external">iOS-runtime理解</a><br><a href="http://www.uu3aa.com/a/29855" target="_blank" rel="external"><a href="http://www.uu3aa.com/a/29855" target="_blank" rel="external">iOS开发之Runtime常用示例总结</a></a><br><a href="http://tech.meituan.com/DiveIntoMethodCache.html" target="_blank" rel="external">深入理解Objective-C：方法缓存</a><br><a href="http://blog.cocoabit.com/yi-li-jie-objctive-c-runtime/" target="_blank" rel="external">译:理解 Objective-C Runtime</a><br><a href="https://www.ianisme.com/ios/2019.html" target="_blank" rel="external"><a href="https://www.ianisme.com/ios/2019.html" target="_blank" rel="external">Objective-C Runtime 1小时入门教程</a></a><br><a href="http://tech.glowing.com/cn/method-swizzling-aop/" target="_blank" rel="external">Method Swizzling 和 AOP 实践</a><br><a href="http://www.jianshu.com/p/9b36e1b636d8" target="_blank" rel="external">刨根问底：对于 self = [super init] 的思考</a></p>
+<p><code>在objc中的一个重要的特点就是对象化。我们所用的 NSObject 这个类其实也是一个对象。如果我们初始化 NSObject *p = [[NSObject alloc] init]; ，那么 p 这个对象中在runtime时会当作一个结构体isa_t对象来处理。而其中的 isa 指针（由objc_object继承而来）会指向自身的类对象。也就是说，这里的 p.isa 是指向 NSObject （这种写法不太严格，但是可以这么描述）。同此，文中的 block 也为了模仿 对象 的结构，制作了一个isa属性。对于isa的具体细节我没有写过相关文章，但是强烈推荐学习这篇博文</code></p>
+<p><strong><em>runtime可以做什么？</em></strong></p>
+<ul>
+<li>多继承</li>
+<li>交换两个方法法的实现</li>
+<li>关联对象</li>
+</ul>
+<hr>
+<p>#GCD<br><a href="https://github.com/nixzhu/dev-blog/blob/master/2014-04-19-grand-central-dispatch-in-depth-part-1.md" target="_blank" rel="external">GCD 深入理解：第一部分</a><br><a href="https://github.com/nixzhu/dev-blog/blob/master/2014-05-14-grand-central-dispatch-in-depth-part-2.md" target="_blank" rel="external">GCD 深入理解：第二部分</a></p>
+<hr>
+<p>#多线程 与 锁<br><a href="http://www.tanhao.me/pieces/616.html/" target="_blank" rel="external">Objective-C中不同方式实现锁(一)</a><br><a href="http://www.tanhao.me/pieces/643.html/" target="_blank" rel="external">Objective-C中不同方式实现锁(二)</a><br><a href="http://blog.duicode.com/1286.html" target="_blank" rel="external">iOS中的锁</a><br><a href="http://www.cnblogs.com/GarveyCalvin/p/4212611.html" target="_blank" rel="external"><a href="http://www.cnblogs.com/GarveyCalvin/p/4212611.html" target="_blank" rel="external">iOS开发－多线程开发之线程安全篇</a></a><br><a href="http://www.jianshu.com/p/35dd92bcfe8c" target="_blank" rel="external">iOS多线程-各种线程锁的简单介绍</a><br><a href="http://yulingtianxia.com/blog/2015/11/01/More-than-you-want-to-know-about-synchronized/" target="_blank" rel="external"><a href="http://yulingtianxia.com/blog/2015/11/01/More-than-you-want-to-know-about-synchronized/" target="_blank" rel="external">关于 @synchronized，这儿比你想知道的还要多</a></a><br><a href="http://www.jianshu.com/p/938d68ed832c" target="_blank" rel="external">iOS中保证线程安全的几种方式与性能对比</a></p>
+<hr>
+<p>#并发编程<br><a href="https://hit-alibaba.github.io/interview/iOS/Cocoa-Touch/Multithreading.html" target="_blank" rel="external">Cocoa 并发编程</a><br><a href="https://bestswifter.com/multithreadconclusion/" target="_blank" rel="external"><a href="https://bestswifter.com/multithreadconclusion/" target="_blank" rel="external">iOS 多线程编程 —— GCD 与 NSOperation 总结</a></a></p>
+<hr>
+<p>#MRC 和 ARC<br><a href="https://hit-alibaba.github.io/interview/iOS/ObjC-Basic/MM.html" target="_blank" rel="external">Objective-C 中的内存分配</a></p>
+<hr>
+<p>#事件处理<br><a href="http://www.cnblogs.com/snake-hand/p/3178070.html" target="_blank" rel="external"><a href="http://www.cnblogs.com/snake-hand/p/3178070.html" target="_blank" rel="external">Cocoa Touch事件处理流程–响应者链</a></a><br><a href="http://www.cnblogs.com/forwk/p/4843159.html" target="_blank" rel="external"><a href="http://www.cnblogs.com/forwk/p/4843159.html" target="_blank" rel="external">iOS中的事件处理、响应者链条以及第一响应者</a></a><br><a href="http://swift.gg/2016/01/06/utilize-the-responder-chain-for-target-action/" target="_blank" rel="external"><a href="http://swift.gg/2016/01/06/utilize-the-responder-chain-for-target-action/" target="_blank" rel="external">在 Target-Action 中使用响应链</a></a></p>
+<hr>
+<p>#设计模式<br><a href="https://hit-alibaba.github.io/interview/iOS/Cocoa-Touch/Design.html" target="_blank" rel="external">设计模式</a></p>
+<hr>
+<p>#动画<br><a href="http://www.jianshu.com/p/06dbbccd54f2" target="_blank" rel="external">荼菜的iOS笔记–Core Animation 核心动画</a></p>
+<hr>
+<p>#流畅：</p>
+<p><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/" target="_blank" rel="external">离屏渲染</a><br><a href="https://objccn.io/issue-3-1/" target="_blank" rel="external"><a href="https://objccn.io/issue-3-1/" target="_blank" rel="external">绘制像素到屏幕上</a></a></p>
+<hr>
+<p>#Swift<br><a href="http://www.swift51.com/swift3.0/chapter1/02_a_swift_tour.html" target="_blank" rel="external">Swift教程</a></p>
+<hr>
+<p>#反编译(逆向)：工具 FLEXLoader</p>
+<hr>
+<p>#python：<br>   step 1： 两本书：<a href="https://bop.molun.net/15.io.html" target="_blank" rel="external">《A Byte of Python》</a>  《Learning Python》《Python核心编程  宋吉广 译》<br>   step 2： 视频：<a href="http://www.imooc.com/learn/177" target="_blank" rel="external">Python 入门（imooc)</a><br>   step 3： 博客：<a href="http://www.jianshu.com/u/a528c4dd31d3" target="_blank" rel="external">菜鸟学python)</a>  </p>
+<hr>
+<p>#Unity3D<br><a href="http://www.51zxw.net/list.aspx?cid=454" target="_blank" rel="external">体验第一个游戏雏形</a></p>
+<p>#AFNetWorking</p>
+<hr>
+<p>#ResumeSample<br><a href="https://github.com/geekcompany/ResumeSample" target="_blank" rel="external">ResumeSample</a><br><a href="https://github.com/ChenYilong/iOSInterviewQuestions" target="_blank" rel="external">《招聘一个靠谱的 iOS》— 参考答案</a></p>
+<hr>
+<p>#<strong>源码解析</strong><br><a href="https://github.com/Draveness/iOS-Source-Code-Analyze" target="_blank" rel="external">源码解析-Draveness</a></p>
+<hr>
+<p>#阿里巴巴<br><a href="https://hit-alibaba.github.io/interview/iOS/ObjC-Basic/Class.html" target="_blank" rel="external">hit-alibaba.github.io</a></p>
+<hr>
+<p>#拓展<br><a href="http://www.jianshu.com/p/3fce0bd6f045" target="_blank" rel="external">iOS 中armv7,armv7s,arm64,i386,x86_64 都是什么</a><br><a href="http://blog.csdn.net/lizhongfu2013/article/details/42387311" target="_blank" rel="external"><a href="http://blog.csdn.net/lizhongfu2013/article/details/42387311" target="_blank" rel="external">iOS开发～制作同时支持armv7,armv7s,arm64,i386,x86_64的静态库.a</a></a><br><strong>clang -rewrite-objc MyClass.m  执行上面的命令，将这一句重写为C代码</strong> </p>
 <hr>
 <p><strong>后话：附上之前写的文章，欢迎指正：</strong><br><a href="http://www.jianshu.com/p/06dbbccd54f2" target="_blank" rel="external">荼菜的iOS笔记–Core Animation 核心动画
 </a><br><a href="http://www.jianshu.com/p/88e20ba25eb9" target="_blank" rel="external">荼菜的iOS笔记–UIView的几个Block动画</a><br><a href="http://www.jianshu.com/p/1cff3fe34307" target="_blank" rel="external">荼菜的iOS笔记–一些实用功能。</a><br><a href="http://www.jianshu.com/p/fa53a2ffc0c6" target="_blank" rel="external">荼菜的iOS笔记–UITableViewCell的各种操作（刷新、插入、删除、动画）</a><br><a href="http://www.jianshu.com/p/6b850e1e6306" target="_blank" rel="external">荼菜的iOS笔记–一张图记住所有git命令行操作。</a><br><a href="http://www.jianshu.com/p/36346ccc1b92" target="_blank" rel="external">荼菜的iOS笔记–一张图告诉你程序员需要知道的这些网站。</a><br><a href="http://www.jianshu.com/p/77ca88d36682" target="_blank" rel="external">荼菜的iOS笔记–图片裁剪黑魔法。</a><br><a href="http://www.jianshu.com/p/443c60408035" target="_blank" rel="external">荼菜的iOS笔记–iOS自动打包脚本（Python）
-</a><br><a href="http://www.jianshu.com/p/3812ede99dca" target="_blank" rel="external">荼菜的iOS笔记–iOS基础优秀博客总结ToDoList</a><br><a href="http://www.jianshu.com/p/191b20c40143" target="_blank" rel="external">荼菜的iOS笔记–Xcode Tips</a><br><strong>当然，我还写过诗。。。</strong><br><a href="http://www.jianshu.com/p/f6927319f802" target="_blank" rel="external">光。</a></p>
+</a><br><a href="http://www.jianshu.com/p/36b6443d5ad7" target="_blank" rel="external">荼菜的iOS笔记–我的编码规范参考。</a><br><a href="http://www.jianshu.com/p/191b20c40143" target="_blank" rel="external">荼菜的iOS笔记–Xcode Tips</a><br><strong>当然，我还写过诗。。。</strong><br><a href="http://www.jianshu.com/p/f6927319f802" target="_blank" rel="external">光。</a></p>
 
       
 
@@ -276,7 +324,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/12/02/荼菜的iOS笔记-我的编码规范参考/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/03/28/荼菜的iOS笔记-iOS基础优秀博客总结ToDoList/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -290,18 +338,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/12/02/荼菜的iOS笔记-iOS自动打包/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/04/02/荼菜的iOS笔记-UITableViewCell的各种操作（刷新、插入、删除、动画）/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          荼菜的iOS笔记--iOS自动打包
+          荼菜的iOS笔记--UITableViewCell的各种操作（刷新、插入、删除、动画）
         
       </div>
     </a>
   
   
-    <a href="/2016/09/08/荼菜的iOS笔记-UIView的几个Block动画/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">荼菜的iOS笔记--UIView的几个Block动画</div>
+    <a href="/2016/03/02/荼菜的iOS笔记-Core-Animation-核心动画/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">荼菜的iOS笔记--Core Animation 核心动画</div>
       <i class="icon-circle-right"></i>
     </a>
   

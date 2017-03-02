@@ -6,23 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>荼菜的iOS笔记--我的编码规范参考. | TuCai&#39;s Blog</title>
+  <title>Archives: 2014/1 | TuCai&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言：下面是我的编码习惯。
-12345678#一、常量相对字符串字面量或数字，我们更推荐适用常量。应使用static方式声明常量，而非使用#define的方式来定义宏。例如：static NSString * const NYTAboutViewControllerCompanyName = @&amp;quot;The New York Times Company&amp;quot;;  static con">
-<meta property="og:type" content="article">
-<meta property="og:title" content="荼菜的iOS笔记--我的编码规范参考.">
-<meta property="og:url" content="http://yoursite.com/2016/12/02/荼菜的iOS笔记-我的编码规范参考/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="TuCai's Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2014/01/index.html">
 <meta property="og:site_name" content="TuCai's Blog">
-<meta property="og:description" content="前言：下面是我的编码习惯。
-12345678#一、常量相对字符串字面量或数字，我们更推荐适用常量。应使用static方式声明常量，而非使用#define的方式来定义宏。例如：static NSString * const NYTAboutViewControllerCompanyName = @&amp;quot;The New York Times Company&amp;quot;;  static con">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1438251-72cf86b265f1fc67.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-03-02T09:14:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="荼菜的iOS笔记--我的编码规范参考.">
-<meta name="twitter:description" content="前言：下面是我的编码习惯。
-12345678#一、常量相对字符串字面量或数字，我们更推荐适用常量。应使用static方式声明常量，而非使用#define的方式来定义宏。例如：static NSString * const NYTAboutViewControllerCompanyName = @&amp;quot;The New York Times Company&amp;quot;;  static con">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1438251-72cf86b265f1fc67.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="TuCai's Blog">
   
     <link rel="alternative" href="/atom.xml" title="TuCai&#39;s Blog" type="application/atom+xml">
   
@@ -154,67 +145,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-荼菜的iOS笔记-我的编码规范参考" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      荼菜的iOS笔记--我的编码规范参考.
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2014" class="archive-year">2014</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2014/01/22/荼菜的iOS笔记-一张图记住所有git命令行操作。/" class="archive-article-date">
+  	<time datetime="2014-01-22T02:05:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-01-22</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2014/01/22/荼菜的iOS笔记-一张图记住所有git命令行操作。/">荼菜的iOS笔记--一张图记住所有git命令行操作。</a>
     </h1>
   
 
-        
-        <a href="/2016/12/02/荼菜的iOS笔记-我的编码规范参考/" class="archive-article-date">
-  	<time datetime="2016-12-02T08:38:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://upload-images.jianshu.io/upload_images/1438251-72cf86b265f1fc67.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="what&#39;s wrong?"></p>
-<p><strong>前言：下面是我的编码习惯。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#一、常量</div><div class="line">相对字符串字面量或数字，我们更推荐适用常量。应使用static方式声明常量，而非使用#define的方式来定义宏。</div><div class="line">例如：</div><div class="line">static NSString * const NYTAboutViewControllerCompanyName = @&quot;The New York Times Company&quot;;  </div><div class="line">static const CGFloat NYTImageThumbnailHeight = 50.0;</div><div class="line">不恰当:</div><div class="line">//#define CompanyName @&quot;The New York Times Company&quot;</div><div class="line">//#define thumbnailHeight 2</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#二、枚举类型</div><div class="line">在使用enum的时候，推荐适用最新的fixed underlying type(WWDC 2012 session 405- Modern Objective-C)规范，因为它具备更强的类型检查和代码完成功能。</div><div class="line">如：</div><div class="line">typedef NS_ENUM(NSInteger, NYTAdRequestState) &#123;</div><div class="line">NYTAdRequestStateInactive,</div><div class="line">NYTAdRequestStateLoading</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#三、布尔变量</div><div class="line">如果一个BOOL属性使用形容词来表达，属性将忽略’is’前缀，但会强调惯用名称。 例如：</div><div class="line">@property (assign, getter=isEditable) BOOL editable;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#四、单例</div><div class="line">在创建单例对象的共享实例时，应使用线程安全模式。</div><div class="line">如：</div><div class="line">(instancetype)sharedInstance &#123;</div><div class="line">static id sharedInstance = nil;</div><div class="line">static dispatch_once_t onceToken;</div><div class="line">dispatch_once(&amp;onceToken, ^&#123;</div><div class="line">sharedInstance = [[self alloc] init];</div><div class="line">&#125;);</div><div class="line">return sharedInstance;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">#五、Import</div><div class="line">在类的头文件中需要引用其他的类的时候，需要用@class这个关键字，这样能减少类与类之间的依赖。</div><div class="line">如:</div><div class="line">store.h:</div><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line">#import &lt;CoreData/CoreData.h&gt;</div><div class="line">@class User;</div><div class="line">@interface Store : NSManagedObject</div><div class="line">@property (nonatomic, retain) User *user;</div><div class="line">@end</div><div class="line">Store.m:</div><div class="line">#import &quot;Store.h&quot;</div><div class="line">#import &quot;User.h&quot;</div><div class="line">@implementation Store</div><div class="line">//doSomething</div><div class="line">@end</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#六、CGRect函数</div><div class="line">当需要获取一个CGRect矩形的x,y,width,height属性时，应使用CGGeometry函数，而非直接访问结构体成员。</div><div class="line">如：</div><div class="line">CGRect frame = self.view.frame;</div><div class="line">CGFloat x = CGRectGetMinX(frame);</div><div class="line">CGFloat y = CGRectGetMinY(frame);</div><div class="line">CGFloat width = CGRectGetWidth(frame);</div><div class="line">CGFloat height = CGRectGetHeight(frame);</div><div class="line">不恰当：</div><div class="line">CGRect frame = self.view.frame;</div><div class="line">CGFloat x = frame.origin.x;</div><div class="line">CGFloat y = frame.origin.y;</div><div class="line">CGFloat width = frame.size.width;</div><div class="line">CGFloat height = frame.size.height;</div></pre></td></tr></table></figure>
-<hr>
-<p><strong>后话：附上之前写的文章，欢迎指正：</strong><br><a href="http://www.jianshu.com/p/06dbbccd54f2" target="_blank" rel="external">荼菜的iOS笔记–Core Animation 核心动画
-</a><br><a href="http://www.jianshu.com/p/88e20ba25eb9" target="_blank" rel="external">荼菜的iOS笔记–UIView的几个Block动画</a><br><a href="http://www.jianshu.com/p/1cff3fe34307" target="_blank" rel="external">荼菜的iOS笔记–一些实用功能。</a><br><a href="http://www.jianshu.com/p/fa53a2ffc0c6" target="_blank" rel="external">荼菜的iOS笔记–UITableViewCell的各种操作（刷新、插入、删除、动画）</a><br><a href="http://www.jianshu.com/p/6b850e1e6306" target="_blank" rel="external">荼菜的iOS笔记–一张图记住所有git命令行操作。</a><br><a href="http://www.jianshu.com/p/36346ccc1b92" target="_blank" rel="external">荼菜的iOS笔记–一张图告诉你程序员需要知道的这些网站。</a><br><a href="http://www.jianshu.com/p/77ca88d36682" target="_blank" rel="external">荼菜的iOS笔记–图片裁剪黑魔法。</a><br><a href="http://www.jianshu.com/p/443c60408035" target="_blank" rel="external">荼菜的iOS笔记–iOS自动打包脚本（Python）
-</a><br><a href="http://www.jianshu.com/p/3812ede99dca" target="_blank" rel="external">荼菜的iOS笔记–iOS基础优秀博客总结ToDoList</a><br><a href="http://www.jianshu.com/p/191b20c40143" target="_blank" rel="external">荼菜的iOS笔记–Xcode Tips</a><br><strong>当然，我还写过诗。。。</strong><br><a href="http://www.jianshu.com/p/f6927319f802" target="_blank" rel="external">光。</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -226,97 +186,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/12/02/荼菜的iOS笔记-我的编码规范参考/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2016/12/02/荼菜的iOS笔记-iOS自动打包/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          荼菜的iOS笔记--iOS自动打包
-        
-      </div>
-    </a>
   
   
-    <a href="/2016/09/08/荼菜的iOS笔记-UIView的几个Block动画/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">荼菜的iOS笔记--UIView的几个Block动画</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-
-  
-    <div class="duoshuo"></div>
+    </div></section>
   
 
-
+    
 
 
           </div>
@@ -339,8 +221,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

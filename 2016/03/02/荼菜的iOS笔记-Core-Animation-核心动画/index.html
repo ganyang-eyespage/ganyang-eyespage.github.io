@@ -6,23 +6,37 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>荼菜的iOS笔记--我的编码规范参考. | TuCai&#39;s Blog</title>
+  <title>荼菜的iOS笔记--Core Animation 核心动画 | TuCai&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言：下面是我的编码习惯。
-12345678#一、常量相对字符串字面量或数字，我们更推荐适用常量。应使用static方式声明常量，而非使用#define的方式来定义宏。例如：static NSString * const NYTAboutViewControllerCompanyName = @&amp;quot;The New York Times Company&amp;quot;;  static con">
+  <meta name="description" content="前言：前些天学习核心动画时参考了一些别人的经验贴，之前是保存在自己的为知笔记里里的，只记录了一些适合自己的片段，因此有些出处来自于前人大神，但当时链接当时并未记录，望谅解。
+#概念#
+
+Core Animation可以用在 Mac OS X 和 iOS平台. Core Animation的动画执行过程是在后台操作的.不会阻塞主线程. 要注意的是, Core Animation是直接作用在CALa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="荼菜的iOS笔记--我的编码规范参考.">
-<meta property="og:url" content="http://yoursite.com/2016/12/02/荼菜的iOS笔记-我的编码规范参考/index.html">
+<meta property="og:title" content="荼菜的iOS笔记--Core Animation 核心动画">
+<meta property="og:url" content="http://yoursite.com/2016/03/02/荼菜的iOS笔记-Core-Animation-核心动画/index.html">
 <meta property="og:site_name" content="TuCai's Blog">
-<meta property="og:description" content="前言：下面是我的编码习惯。
-12345678#一、常量相对字符串字面量或数字，我们更推荐适用常量。应使用static方式声明常量，而非使用#define的方式来定义宏。例如：static NSString * const NYTAboutViewControllerCompanyName = @&amp;quot;The New York Times Company&amp;quot;;  static con">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1438251-72cf86b265f1fc67.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-03-02T09:14:33.000Z">
+<meta property="og:description" content="前言：前些天学习核心动画时参考了一些别人的经验贴，之前是保存在自己的为知笔记里里的，只记录了一些适合自己的片段，因此有些出处来自于前人大神，但当时链接当时并未记录，望谅解。
+#概念#
+
+Core Animation可以用在 Mac OS X 和 iOS平台. Core Animation的动画执行过程是在后台操作的.不会阻塞主线程. 要注意的是, Core Animation是直接作用在CALa">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1438251-d76eca0a75401c1c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1385290-8bace45f764e3e90.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1438251-ad2000af90b2de3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1438251-b2c222befe265ef3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1385290-bebe0c66448abd71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1385290-48a16fa02eb81dc7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1438251-d1f18997e631b2af.gif?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1438251-5d74b2646f42b33f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1438251-8f4d7db34f0fee8f.gif?imageMogr2/auto-orient/strip">
+<meta property="og:updated_time" content="2017-03-02T09:23:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="荼菜的iOS笔记--我的编码规范参考.">
-<meta name="twitter:description" content="前言：下面是我的编码习惯。
-12345678#一、常量相对字符串字面量或数字，我们更推荐适用常量。应使用static方式声明常量，而非使用#define的方式来定义宏。例如：static NSString * const NYTAboutViewControllerCompanyName = @&amp;quot;The New York Times Company&amp;quot;;  static con">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1438251-72cf86b265f1fc67.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="荼菜的iOS笔记--Core Animation 核心动画">
+<meta name="twitter:description" content="前言：前些天学习核心动画时参考了一些别人的经验贴，之前是保存在自己的为知笔记里里的，只记录了一些适合自己的片段，因此有些出处来自于前人大神，但当时链接当时并未记录，望谅解。
+#概念#
+
+Core Animation可以用在 Mac OS X 和 iOS平台. Core Animation的动画执行过程是在后台操作的.不会阻塞主线程. 要注意的是, Core Animation是直接作用在CALa">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1438251-d76eca0a75401c1c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="TuCai&#39;s Blog" type="application/atom+xml">
   
@@ -154,38 +168,95 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-荼菜的iOS笔记-我的编码规范参考" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-荼菜的iOS笔记-Core-Animation-核心动画" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      荼菜的iOS笔记--我的编码规范参考.
+      荼菜的iOS笔记--Core Animation 核心动画
     </h1>
   
 
         
-        <a href="/2016/12/02/荼菜的iOS笔记-我的编码规范参考/" class="archive-article-date">
-  	<time datetime="2016-12-02T08:38:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
+        <a href="/2016/03/02/荼菜的iOS笔记-Core-Animation-核心动画/" class="archive-article-date">
+  	<time datetime="2016-03-02T08:55:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://upload-images.jianshu.io/upload_images/1438251-72cf86b265f1fc67.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="what&#39;s wrong?"></p>
-<p><strong>前言：下面是我的编码习惯。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#一、常量</div><div class="line">相对字符串字面量或数字，我们更推荐适用常量。应使用static方式声明常量，而非使用#define的方式来定义宏。</div><div class="line">例如：</div><div class="line">static NSString * const NYTAboutViewControllerCompanyName = @&quot;The New York Times Company&quot;;  </div><div class="line">static const CGFloat NYTImageThumbnailHeight = 50.0;</div><div class="line">不恰当:</div><div class="line">//#define CompanyName @&quot;The New York Times Company&quot;</div><div class="line">//#define thumbnailHeight 2</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#二、枚举类型</div><div class="line">在使用enum的时候，推荐适用最新的fixed underlying type(WWDC 2012 session 405- Modern Objective-C)规范，因为它具备更强的类型检查和代码完成功能。</div><div class="line">如：</div><div class="line">typedef NS_ENUM(NSInteger, NYTAdRequestState) &#123;</div><div class="line">NYTAdRequestStateInactive,</div><div class="line">NYTAdRequestStateLoading</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#三、布尔变量</div><div class="line">如果一个BOOL属性使用形容词来表达，属性将忽略’is’前缀，但会强调惯用名称。 例如：</div><div class="line">@property (assign, getter=isEditable) BOOL editable;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#四、单例</div><div class="line">在创建单例对象的共享实例时，应使用线程安全模式。</div><div class="line">如：</div><div class="line">(instancetype)sharedInstance &#123;</div><div class="line">static id sharedInstance = nil;</div><div class="line">static dispatch_once_t onceToken;</div><div class="line">dispatch_once(&amp;onceToken, ^&#123;</div><div class="line">sharedInstance = [[self alloc] init];</div><div class="line">&#125;);</div><div class="line">return sharedInstance;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">#五、Import</div><div class="line">在类的头文件中需要引用其他的类的时候，需要用@class这个关键字，这样能减少类与类之间的依赖。</div><div class="line">如:</div><div class="line">store.h:</div><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line">#import &lt;CoreData/CoreData.h&gt;</div><div class="line">@class User;</div><div class="line">@interface Store : NSManagedObject</div><div class="line">@property (nonatomic, retain) User *user;</div><div class="line">@end</div><div class="line">Store.m:</div><div class="line">#import &quot;Store.h&quot;</div><div class="line">#import &quot;User.h&quot;</div><div class="line">@implementation Store</div><div class="line">//doSomething</div><div class="line">@end</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#六、CGRect函数</div><div class="line">当需要获取一个CGRect矩形的x,y,width,height属性时，应使用CGGeometry函数，而非直接访问结构体成员。</div><div class="line">如：</div><div class="line">CGRect frame = self.view.frame;</div><div class="line">CGFloat x = CGRectGetMinX(frame);</div><div class="line">CGFloat y = CGRectGetMinY(frame);</div><div class="line">CGFloat width = CGRectGetWidth(frame);</div><div class="line">CGFloat height = CGRectGetHeight(frame);</div><div class="line">不恰当：</div><div class="line">CGRect frame = self.view.frame;</div><div class="line">CGFloat x = frame.origin.x;</div><div class="line">CGFloat y = frame.origin.y;</div><div class="line">CGFloat width = frame.size.width;</div><div class="line">CGFloat height = frame.size.height;</div></pre></td></tr></table></figure>
+        <p><img src="http://upload-images.jianshu.io/upload_images/1438251-d76eca0a75401c1c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="TuCai"></p>
+<p><strong>前言：前些天学习核心动画时参考了一些别人的经验贴，之前是保存在自己的为知笔记里里的，只记录了一些适合自己的片段，因此有些出处来自于前人大神，但当时链接当时并未记录，望谅解。</strong></p>
+<p>#概念#</p>
+<ul>
+<li>Core Animation可以用在 Mac OS X 和 iOS平台. Core Animation的动画执行过程是在后台操作的.不会阻塞主线程. 要注意的是, Core Animation是直接作用在CALayer上的.并非UIView。</li>
+<li>使用步骤：<br>1、创建一个CAAnimation对象<br>2、设置一些动画的相关属性<br>3、给CALayer添加动画（addAnimation:forKey: 方法）<br>4、停止CALayer动画（removeAnimationForKey: 方法）<br>注意：<strong>1. 当你将animation加入layer层以后，你就无法再更改动画效果了。2.注意: 如果当动画正在执行的时候, 将程序退出到后台, 那么当程序再次进入前台的时候就不执行了。原因: 因为再次进入前台后动画已经被删除了。解决: anim.removedOnCompletion = NO;</strong></li>
+</ul>
+<h1 id="一-、CAAnimation"><a href="#一-、CAAnimation" class="headerlink" title="一 、CAAnimation"></a>一 、CAAnimation</h1><p>CAAnimation类是所有动画对象的父类，负责控制动画的持续时间和速度等，是个抽象类，不能直接使用，应该使用它具体的子类,CAAnimation的继承结构如下图：<br><img src="http://upload-images.jianshu.io/upload_images/1385290-8bace45f764e3e90.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="CAAnimation继承结构"></p>
+<p>##属性：</p>
+<ul>
+<li><strong> duration</strong>：动画的持续时间，默认为0.25秒</li>
+<li><strong>repeatCount</strong>：动画的重复次数</li>
+<li><strong>repeatDuration</strong>：动画的重复时间</li>
+<li><strong>removedOnCompletion</strong>：默认为YES，代表动画执行完毕后就从图层上移除，图形会恢复到动画执行前的状态。如果想让图层保持显示动画执行后的状态，那就设置为NO，不过还要设置fillMode属性为kCAFillModeForwards</li>
+<li><strong>fillMode</strong>：决定当前对象在非active时间段的行为.比如动画开始之前,动画结束之后</li>
+<li><strong>beginTime</strong>：可以用来设置动画延迟执行时间，若想延迟2s，就设置为CACurrentMediaTime()+2，CACurrentMediaTime()为图层的当前时间</li>
+<li><p><strong>timingFunction</strong>：速度控制函数，控制动画运行的节奏</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">枚举参数：</div><div class="line">（1）kCAMediaTimingFunctionLinear 时间曲线函数，匀速</div><div class="line">（2）kCAMediaTimingFunctionEaseIn 时间曲线函数，由慢到特别快</div><div class="line">（3）kCAMediaTimingFunctionEaseOut 时间曲线函数，由快到慢</div><div class="line">（4）kCAMediaTimingFunctionEaseInEaseOut 时间曲线函数，由慢到快</div><div class="line">（5）kCAMediaTimingFunctionDefault 系统默认</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>delegate</strong>：动画代理，一般设置隐式代理，该代理是NSObject的分类，不需要遵守协议<br>anim.delegate = self;<br>（1）- (void)animationDidStart:(CAAnimation <em>)anim;<br>核心动画开始时执行<br>（2）- (void)animationDidStop:(CAAnimation </em>)anim finished:(BOOL)flag;<br>核心动画执行结束后调用</p>
+</li>
+</ul>
+<h1 id="二、-CAPropertyAnimation"><a href="#二、-CAPropertyAnimation" class="headerlink" title="二、 CAPropertyAnimation"></a>二、 CAPropertyAnimation</h1><p>是CAAnimation的子类，也是个抽象类，要想创建动画对象，应该使用它的两个子类：CABasicAnimation和CAKeyframeAnimation</p>
+<p>属性：@property(nullable, copy) NSString <em>keyPath;<br>类方法：+ (instancetype)animationWithKeyPath:(nullableNSString </em>)path;</p>
+<p><strong>keyPath</strong>参数：<em>通过指定CALayer的一个属性名做为keyPath里的参数(NSString类型)，并且对CALayer的这个属性的值进行修改，达到相应的动画效果。比如，指定@”position”为keyPath，就修改CALayer的position属性的值，以达到平移的动画效果。</em></p>
+<p>例子：CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@”position.y”];</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1438251-ad2000af90b2de3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="keyPath参数"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1438251-b2c222befe265ef3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="keyPath参数"></p>
+<h1 id="三、-CABasicAnimation（基本动画）"><a href="#三、-CABasicAnimation（基本动画）" class="headerlink" title="三、 CABasicAnimation（基本动画）"></a>三、 CABasicAnimation（基本动画）</h1><p><strong> 属性：</strong></p>
+<ul>
+<li><strong>fromValue</strong> : keyPath相应属性的初始值</li>
+<li><strong>toValue</strong> : keyPath相应属性的结束值，到某个固定的值（类似transform的make含义）注意：随着动画的进行,在长度为duration的持续时间内,keyPath相应属性的值从fromValue渐渐地变为toValue.如果<strong><em>fillMode = kCAFillModeForwards和removedOnComletion = NO</em></strong>;那么在动画执行完毕后,图层会保持显示动画执行后的状态,但实质上,图层的属性值还是动画执行前的初始值,并没有真正被改变.比如: CALayer的postion初始值为(0,0),CABasicAnimation的fromValue为(10,10),toValue为 (100,100),虽然动画执行完毕后图层保持在(100,100) 这个位置,实质上图层的position还是为(0,0);</li>
+<li>byValue：不断进行累加的数值（类似transform非make方法的含义）<br>CABasicAnimation <em>animation = [CABasicAnimation animationWithKeyPath:@”transform.rotation.z”];<br>animation.byValue = @(M_PI </em> 2);</li>
+</ul>
+<h1 id="四、-CAKeyframeAnimation（关键帧动画）"><a href="#四、-CAKeyframeAnimation（关键帧动画）" class="headerlink" title="四、 CAKeyframeAnimation（关键帧动画）"></a>四、 CAKeyframeAnimation（关键帧动画）</h1><p>和CABasicAnimation的区别：CABasicAnimation只能从一个数值(fromValue)变到另一个数值(toValue)，而CAKeyframeAnimation会使用一个NSArray（values）保存这些数值，实现多个点间的动画效果，CABasicAnimation可看做是最多只有2个关键帧的CAKeyframeAnimation</p>
+<p><strong>属性：</strong></p>
+<ul>
+<li><p>1.<strong>values</strong>:NSArray对象，里面的元素称为”关键帧”（NSValue类型），动画对象会在指定的时间(duration)内，依次显示values数组中的每一个关键帧（ NSValue）<br>//设置动画属性NSValue <em>p1 = [NSValue valueWithCGPoint:CGPointMake(50, 150)];NSValue </em>p2 = [NSValue valueWithCGPoint:CGPointMake(250, 150)];NSValue <em>p3 = [NSValue valueWithCGPoint:CGPointMake(50, 550)];NSValue </em>p4 = [NSValue valueWithCGPoint:CGPointMake(250, 550)];<br>animKey.values = @[p1, p2, p3, p4];</p>
+</li>
+<li><p>2.<strong>path</strong>:可以设置一个CGPathRef\CGMutablePathRef,让层跟着路径移动，path只对CALayer的<strong><em>anchorPoint(锚点)</em></strong>和position起作用，<em>如果设置了path，那么values将被忽略</em>。<br>UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(50, 100, 250, 100)];<br>animKey.path = path.CGPath;</p>
+</li>
+<li><p>3.<strong>keyTimes</strong>：（keyTimes属性指定的是当前状态节点到初始状态节点的时间占动画总时长的比例<br>。若果不设置keyTimes则匀速播放）可以为对应的关键帧指定对应的时间点,其取值范围为0到1.0,keyTimes中的每一个时间值都对应values中的每一帧，当keyTimes没有设置的时候,各个关键帧的时间是平分的</p>
+</li>
+<li><p>4.<strong>rotationMode</strong>：旋转模式<br>（1）如果为nil或不设置效果为</p>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1385290-bebe0c66448abd71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="旋转模式效果1"></p>
+<p>（2）设置为kCAAnimationRotateAuto 或 kCAAnimationRotateAutoReverse 会随着旋转的角度做 ”自转“</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1385290-48a16fa02eb81dc7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="旋转模式效果2"></p>
+<h1 id="五、-CAAnimationGroup（组动画）"><a href="#五、-CAAnimationGroup（组动画）" class="headerlink" title="五、 CAAnimationGroup（组动画）"></a>五、 CAAnimationGroup（组动画）</h1><p>可以保存一组动画对象，将CAAnimationGroup对象加入层后，组中所有动画对象可以同时并发运行<br><strong>属性：</strong><br><strong>animations</strong>：动画组，用来保存一组动画对象的NSArray，默认情况下，一组动画对象是同时运行的，也可以通过设置动画对象的beginTime属性来更改动画的开始时间。</p>
+<p>栗子🌰🔽</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1438251-d1f18997e631b2af.gif?imageMogr2/auto-orient/strip" alt="CAAnimationGroup.gif"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">- (void)viewDidLoad &#123;</div><div class="line">    [super viewDidLoad]; </div><div class="line">    self.button.frame = CGRectMake(150, 100, 50, 50);</div><div class="line">&#125;</div><div class="line">-(UIButton *)button&#123;</div><div class="line">    if (_button == nil) &#123;</div><div class="line">        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];</div><div class="line">        button.backgroundColor=[UIColor redColor];</div><div class="line">        button.tag=0;</div><div class="line">        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];</div><div class="line">        [self.view addSubview:button];</div><div class="line">        _button=button;</div><div class="line">    &#125;</div><div class="line">    return _button;</div><div class="line">&#125;</div><div class="line">//点击事件</div><div class="line">-(void)buttonClicked:(UIButton *)button&#123;</div><div class="line">    CAKeyframeAnimation * animation = [CAKeyframeAnimation animationWithKeyPath:@&quot;position&quot;];</div><div class="line">    animation.values = @[[NSValue valueWithCGPoint:CGPointMake(0, 0)],[NSValue valueWithCGPoint:CGPointMake(100, 100)],[NSValue valueWithCGPoint:CGPointMake(0, 200)]];</div><div class="line">    animation.duration = 2;</div><div class="line">    animation.removedOnCompletion = NO;</div><div class="line">    animation.fillMode = kCAFillModeForwards;</div><div class="line">    animation.keyTimes = @[@0,@0.25,@0.5,@0.75,@1];</div><div class="line">    animation.path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(100, 100, 100, 100)].CGPath;</div><div class="line">    CABasicAnimation * animation2 = [CABasicAnimation animationWithKeyPath:@&quot;cornerRadius&quot;];</div><div class="line">    animation2.toValue = @50;</div><div class="line">    animation2.duration = 2;</div><div class="line">    animation2.fillMode = kCAFillModeForwards;</div><div class="line">    animation2.removedOnCompletion = NO;</div><div class="line">    </div><div class="line">    CAAnimationGroup * group = [CAAnimationGroup animation];</div><div class="line">    group.duration = 2;</div><div class="line">    group.fillMode = kCAFillModeForwards;</div><div class="line">    group.removedOnCompletion = NO;</div><div class="line">    group.animations = @[animation,animation2];</div><div class="line">    [button.layer addAnimation:group forKey:@&quot;group&quot;];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="六、-CATransition（转场动画）"><a href="#六、-CATransition（转场动画）" class="headerlink" title="六、 CATransition（转场动画）"></a>六、 CATransition（转场动画）</h1><p>用于做转场动画，能够为层提供移出屏幕和移入屏幕的动画效果。iOS比Mac OS X的转场动画效果少一点。UINavigationController就是通过CATransition实现了将控制器的视图推入屏幕的动画效果<br><strong>属性：</strong></p>
+<ul>
+<li>1.<strong><em>type</em></strong>：设置动画过渡的类型</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1438251-5d74b2646f42b33f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="转场动画过渡效果"></p>
+<ul>
+<li>2.<strong><em>subtype</em></strong>：设置动画过渡方向<br>枚举:kCATransitionFromRight<br>kCATransitionFromLeft<br>kCATransitionFromTop<br>kCATransitionFromBottom</li>
+<li>3.<strong><em>startProgress</em></strong>：动画起点(在整体动画的百分比)</li>
+<li>4.<strong><em>endProgress</em></strong>：动画终点(在整体动画的百分比)</li>
+</ul>
+<p><strong>场景：所以我目前测出来的能用的情况有，imageView切换图片，控制器的push或modal，UIView对象调用exchangeSubviewAtIndex：WithIndex：方法的时候可以出发转场动画，其他我真是没有测出来，有大神知道还望告知=。=十分感谢。</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1438251-8f4d7db34f0fee8f.gif?imageMogr2/auto-orient/strip" alt="CATransition.gif"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">-(void)buttonClicked:(UIButton *)button&#123;</div><div class="line">    </div><div class="line">    CATransition *animation = [CATransition animation];</div><div class="line">    animation.duration = 5;</div><div class="line">    animation.fillMode = kCAFillModeForwards;</div><div class="line">    animation.type = @&quot;rippleEffect&quot;;</div><div class="line">    animation.subtype = kCATransitionFromTop;</div><div class="line">    [self.img.layer addAnimation:animation forKey:@&quot;ripple&quot;];</div><div class="line">    self.img.image = [UIImage imageNamed:@&quot;ic_empty_theater&quot;];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
-<p><strong>后话：附上之前写的文章，欢迎指正：</strong><br><a href="http://www.jianshu.com/p/06dbbccd54f2" target="_blank" rel="external">荼菜的iOS笔记–Core Animation 核心动画
-</a><br><a href="http://www.jianshu.com/p/88e20ba25eb9" target="_blank" rel="external">荼菜的iOS笔记–UIView的几个Block动画</a><br><a href="http://www.jianshu.com/p/1cff3fe34307" target="_blank" rel="external">荼菜的iOS笔记–一些实用功能。</a><br><a href="http://www.jianshu.com/p/fa53a2ffc0c6" target="_blank" rel="external">荼菜的iOS笔记–UITableViewCell的各种操作（刷新、插入、删除、动画）</a><br><a href="http://www.jianshu.com/p/6b850e1e6306" target="_blank" rel="external">荼菜的iOS笔记–一张图记住所有git命令行操作。</a><br><a href="http://www.jianshu.com/p/36346ccc1b92" target="_blank" rel="external">荼菜的iOS笔记–一张图告诉你程序员需要知道的这些网站。</a><br><a href="http://www.jianshu.com/p/77ca88d36682" target="_blank" rel="external">荼菜的iOS笔记–图片裁剪黑魔法。</a><br><a href="http://www.jianshu.com/p/443c60408035" target="_blank" rel="external">荼菜的iOS笔记–iOS自动打包脚本（Python）
-</a><br><a href="http://www.jianshu.com/p/3812ede99dca" target="_blank" rel="external">荼菜的iOS笔记–iOS基础优秀博客总结ToDoList</a><br><a href="http://www.jianshu.com/p/191b20c40143" target="_blank" rel="external">荼菜的iOS笔记–Xcode Tips</a><br><strong>当然，我还写过诗。。。</strong><br><a href="http://www.jianshu.com/p/f6927319f802" target="_blank" rel="external">光。</a></p>
+<p><strong>后话：附上之前写的文章，欢迎指正：</strong><br><a href="http://www.jianshu.com/p/88e20ba25eb9" target="_blank" rel="external">荼菜的iOS笔记–UIView的几个Block动画</a><br><a href="http://www.jianshu.com/p/1cff3fe34307" target="_blank" rel="external">荼菜的iOS笔记–一些实用功能。</a><br><a href="http://www.jianshu.com/p/fa53a2ffc0c6" target="_blank" rel="external">荼菜的iOS笔记–UITableViewCell的各种操作（刷新、插入、删除、动画）</a><br><a href="http://www.jianshu.com/p/6b850e1e6306" target="_blank" rel="external">荼菜的iOS笔记–一张图记住所有git命令行操作。</a><br><a href="http://www.jianshu.com/p/36346ccc1b92" target="_blank" rel="external">荼菜的iOS笔记–一张图告诉你程序员需要知道的这些网站。</a><br><a href="http://www.jianshu.com/p/77ca88d36682" target="_blank" rel="external">荼菜的iOS笔记–图片裁剪黑魔法。</a><br><a href="http://www.jianshu.com/p/443c60408035" target="_blank" rel="external">荼菜的iOS笔记–iOS自动打包脚本（Python）
+</a><br><a href="http://www.jianshu.com/p/36b6443d5ad7" target="_blank" rel="external">荼菜的iOS笔记–我的编码规范参考。</a><br><a href="http://www.jianshu.com/p/3812ede99dca" target="_blank" rel="external">荼菜的iOS笔记–iOS基础优秀博客总结ToDoList</a><br><a href="http://www.jianshu.com/p/191b20c40143" target="_blank" rel="external">荼菜的iOS笔记–Xcode Tips</a><br><strong>当然，我还写过诗。。。</strong><br><a href="http://www.jianshu.com/p/f6927319f802" target="_blank" rel="external">光。</a></p>
 
       
 
@@ -276,7 +347,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/12/02/荼菜的iOS笔记-我的编码规范参考/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/03/02/荼菜的iOS笔记-Core-Animation-核心动画/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -290,18 +361,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/12/02/荼菜的iOS笔记-iOS自动打包/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/03/28/荼菜的iOS笔记-iOS基础优秀博客总结ToDoList/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          荼菜的iOS笔记--iOS自动打包
+          荼菜的iOS笔记--iOS基础优秀博客总结ToDoList
         
       </div>
     </a>
   
   
-    <a href="/2016/09/08/荼菜的iOS笔记-UIView的几个Block动画/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">荼菜的iOS笔记--UIView的几个Block动画</div>
+    <a href="/2015/12/25/荼菜的iOS笔记-一些实用功能。/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">荼菜的iOS笔记--一些实用功能。</div>
       <i class="icon-circle-right"></i>
     </a>
   
