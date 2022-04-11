@@ -3,7 +3,7 @@ languageCode: "zh-cn"
 title: "TUCAI"
 theme: "hugo-tania"
 paginate: 6
-publishDir: "docs"  # 将生成的静态页面文件夹设置到 docs 下
+publishdir: "docs"  # 将生成的静态页面文件夹设置到 docs 下
 
 
 disqusShortname: https-hugo-tania-netlify-app
@@ -70,9 +70,9 @@ menu:
   header:
     - name: Articles
       url: "/articles/"
-  # footer:
-  #   - name: RSS
-  #     url: "/index.xml"
+  footer:
+    - name: RSS
+      url: "/index.xml"
 
 markup:
   highlight:
