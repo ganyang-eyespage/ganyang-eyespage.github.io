@@ -1,8 +1,10 @@
 baseurl: "https://ganyang-eyespage.github.io"
-languageCode: "en-us"
-title: "Hugo Tania"
+languageCode: "zh-cn"
+title: "TUCAI"
 theme: "hugo-tania"
 paginate: 6
+publishDir: "docs"  # 将生成的静态页面文件夹设置到 docs 下
+
 
 disqusShortname: https-hugo-tania-netlify-app
 
@@ -17,9 +19,9 @@ params:
   # Default to true
   enableFootnotes: true
   
-  siteName: "Hugo Tania is Amazing"
-  siteDesc: "Hugo is Absurdly Fast!"
-  author: "Hugo Tania"
+  # siteName: "Hugo Tania is Amazing"
+  # siteDesc: "Hugo is Absurdly Fast!"
+  author: "Tucai"
 
   colorScheme:
     # Enable toggle colorScheme
@@ -39,9 +41,9 @@ params:
   # Show your socail information with icon on index bio with `_index.md` content.
   socialOptions:
     dev-to:
-    email:
+    email: tucai137671@163.com
     facebook:
-    github:
+    github: https://github.com/ganyang-eyespage
     instagram:
     linkedin:
     medium:
@@ -54,7 +56,7 @@ params:
   
   # Comments settings
   comments:
-    enabled: true
+    enabled: false
     provider: giscus
 
     giscus:
@@ -68,9 +70,9 @@ menu:
   header:
     - name: Articles
       url: "/articles/"
-  footer:
-    - name: RSS
-      url: "/index.xml"
+  # footer:
+  #   - name: RSS
+  #     url: "/index.xml"
 
 markup:
   highlight:
