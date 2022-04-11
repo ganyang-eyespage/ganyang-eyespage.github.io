@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://ganyang-eyespage.github.io/sitemap.xml
