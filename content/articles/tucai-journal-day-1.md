@@ -3,6 +3,7 @@ title: 书摘-寂寞的游戏
 date: 2022-04-11T18:04:32+08:00
 draft: false
 description: 第一篇书摘
+author: TuCai
 tags: 
 - 书摘
 categories:
