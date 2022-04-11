@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on TUCAI</title>
+    <link>https://ganyang-eyespage.github.io/articles/</link>
+    <description>Recent content in Articles on TUCAI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 11 Apr 2022 17:39:39 +0800</lastBuildDate><atom:link href="https://ganyang-eyespage.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tucai First Article</title>
+      <link>https://ganyang-eyespage.github.io/articles/tucai-first-article/</link>
+      <pubDate>Mon, 11 Apr 2022 17:39:39 +0800</pubDate>
+      
+      <guid>https://ganyang-eyespage.github.io/articles/tucai-first-article/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
