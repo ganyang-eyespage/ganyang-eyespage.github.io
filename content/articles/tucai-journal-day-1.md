@@ -5,6 +5,8 @@ draft: false
 description: 第一篇书摘
 tags: 
 - 书摘
+categories:
+- 读书
 ---
 
 
