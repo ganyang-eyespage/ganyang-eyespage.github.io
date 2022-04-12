@@ -21,7 +21,7 @@ params:
   
   # siteName: "Hugo Tania is Amazing"
   # siteDesc: "Hugo is Absurdly Fast!"
-  author: "Tucai"
+  # author: "Tucai"
 
   colorScheme:
     # Enable toggle colorScheme
