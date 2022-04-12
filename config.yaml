@@ -36,7 +36,7 @@ params:
   maxCategoryToShow: 10
 
   mainSections:
-    - posts
+    - articles
 
   # Show your socail information with icon on index bio with `_index.md` content.
   socialOptions:
@@ -70,9 +70,9 @@ menu:
   header:
     - name: Articles
       url: "/articles/"
-  footer:
-    - name: RSS
-      url: "/index.xml"
+  # footer:
+  #   - name: RSS
+  #     url: "/index.xml"
 
 markup:
   highlight:
