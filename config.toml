@@ -1,5 +1,0 @@
-baseURL = 'https://ganyang-eyespage.github.io/'
-languageCode = 'zh-cn'
-title = 'TUCAI'
-theme = 'hugo-tania'
-publishdir = 'docs'
