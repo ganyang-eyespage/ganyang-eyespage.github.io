@@ -1,20 +1,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TUCAI</title>
+    <title></title>
     <link>https://ganyang-eyespage.github.io/</link>
-    <description>Recent content on TUCAI</description>
+    <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 12 Apr 2022 10:15:15 +0800</lastBuildDate><atom:link href="https://ganyang-eyespage.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Apr 2022 11:21:20 +0800</lastBuildDate><atom:link href="https://ganyang-eyespage.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-    <title>Tucai Test</title>
-    <link>https://ganyang-eyespage.github.io/articles/tucai-test/</link>
-    <pubDate>Tue, 12 Apr 2022 10:15:15 +0800</pubDate>
+    <title>光</title>
+    <link>https://ganyang-eyespage.github.io/articles/poet-light/</link>
+    <pubDate>Tue, 12 Apr 2022 11:21:20 +0800</pubDate>
     <author>TuCai</author>
-    <guid>https://ganyang-eyespage.github.io/articles/tucai-test/</guid>
+    <guid>https://ganyang-eyespage.github.io/articles/poet-light/</guid>
+    <description>
+        &lt;center&gt;我&lt;/center&gt;
+&lt;center&gt;朝着光走去&lt;/center&gt;
+&lt;center&gt;朦胧全是人影&lt;/center&gt;
+&lt;center&gt;可我看不到任何人的面孔&lt;/center&gt;
+&lt;center&gt;姑且当做不认得任何人好了&lt;/center&gt;
+&lt;center&gt;管他呢&lt;/center&gt;
+&lt;center&gt;因为我知道&lt;/center&gt;
+&lt;center&gt;光的方向有你&lt;/center&gt;
+&lt;center&gt;你逆着它&lt;/center&gt;
+&lt;center&gt;你认得出我&lt;/center&gt;
+    </description>
+    </item>
+    
+    <item>
+    <title>HOGO文章发布步骤</title>
+    <link>https://ganyang-eyespage.github.io/articles/hugo-post-step/</link>
+    <pubDate>Tue, 12 Apr 2022 11:10:59 +0800</pubDate>
+    <author>TuCai</author>
+    <guid>https://ganyang-eyespage.github.io/articles/hugo-post-step/</guid>
     <description>
         &lt;ul&gt;
-&lt;li&gt;Test book haha&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Step 1: 进入hugo目录 &lt;strong&gt;hugo new articles/hugo-post-step.md&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Step 2: 编辑此md文件并保存&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Step 3: 生成静态页面 &lt;strong&gt;hugo&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Step 4: 本地查看静态页面 &lt;strong&gt;hugo server&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Step 5: 上传到github&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 
     </description>

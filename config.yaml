@@ -1,6 +1,6 @@
 baseurl: "https://ganyang-eyespage.github.io"
 languageCode: "zh-cn"
-title: "TUCAI"
+title: ""
 theme: "hugo-tania"
 paginate: 6
 publishdir: "docs"  # 将生成的静态页面文件夹设置到 docs 下
@@ -21,7 +21,7 @@ params:
   
   # siteName: "Hugo Tania is Amazing"
   # siteDesc: "Hugo is Absurdly Fast!"
-  # author: "Tucai"
+  author: "Tucai"
 
   colorScheme:
     # Enable toggle colorScheme

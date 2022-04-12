@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HOGO on </title>
+    <link>https://ganyang-eyespage.github.io/tags/hogo/</link>
+    <description>Recent content in HOGO on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 12 Apr 2022 11:10:59 +0800</lastBuildDate><atom:link href="https://ganyang-eyespage.github.io/tags/hogo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HOGO文章发布步骤</title>
+      <link>https://ganyang-eyespage.github.io/articles/hugo-post-step/</link>
+      <pubDate>Tue, 12 Apr 2022 11:10:59 +0800</pubDate>
+      
+      <guid>https://ganyang-eyespage.github.io/articles/hugo-post-step/</guid>
+      <description>  Step 1: 进入hugo目录 hugo new articles/hugo-post-step.md
+  Step 2: 编辑此md文件并保存
+  Step 3: 生成静态页面 hugo
+  Step 4: 本地查看静态页面 hugo server
+  Step 5: 上传到github
+  </description>
+    </item>
+    
+  </channel>
+</rss>
